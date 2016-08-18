@@ -4194,7 +4194,7 @@ header.main-header {
 }
 .main-header sub:not(.unset),
 .main-header sup:not(.unset) {
-  color: #fff !important;
+  color: #464e54 !important;
 }
 body.page:not(.home) main.spine-blank-template > header.main-header {
   height: 85px;
