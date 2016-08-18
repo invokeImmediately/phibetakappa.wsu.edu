@@ -1,0 +1,247 @@
+@import "..\WSU-UE---CSS\wp-master-style-sheet.less";
+
+@pbk-orange: #d59929;
+@pbk-blue: #114e8f;
+
+body {
+	background: @pbk-blue linear-graduent(to bottom, rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0.3333), rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0)) top left/10px 100% repeat-x fixed;
+}
+
+main {
+	background: @hex-white;
+	border-left: 1px solid @pbk-blue;
+}
+
+#jacket {
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-attachment: fixed;
+}
+
+header.main-header {
+	&:extend(.has-dflt-font);
+	background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/08/site-header_platinum-background_crimson.jpg) repeat scroll left top;
+	color: @hex-white !important;
+}
+
+.main-header sub:not(.unset), .main-header sup:not(.unset) {
+	color: @hex-white !important;
+}
+
+body.page:not(.home) main.spine-blank-template > header.main-header {
+	height: 85px;
+}
+
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### ARTICLE/PAGE-HEADER layouts ##################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Container designed to hold the header for the article being presented on the current page.             ║
+ *  ║  ╘═» Customized here for use on the WSU Phi Beta Kappa website.                                        ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+section.row.halves.article-header {
+	position: relative;
+	height: 230px;
+	&.gutter .column:not(.gutterless) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	&.pad-top .column {
+		padding-top: 0;
+	}
+	div.column {	
+		&.one {
+			position: absolute;
+			right: 40%;
+			left: 0;
+			width: auto;
+			height: 100%;			
+			padding-left: 0;
+			padding-right: 0;			
+			background: @hex-dark-gray;
+			& > h1 {
+				position: absolute;
+				top: 50%;
+				right: @v-dflt-spcng;
+				left: @v-dflt-spcng;
+				margin-bottom: 0.35em;
+				color: @hex-white;
+				.transform(~"translateY(-50%)");
+				@media (max-width: @v-rghtclmn-thrshld) {
+					font-size: 6.5vw;
+					right: (@v-dflt-spcng / 2);
+					left: (@v-dflt-spcng / 2);
+				}
+			}
+			& > :not(h1) {
+				display: none;
+			}
+		}
+		&.two {
+			position: absolute;
+			right: 0;
+			left: 60%;
+			width: auto;
+			height: 100%;
+			background-color: @hex-gray;
+			background-position: center center;
+			background-size: cover;
+		}
+		&.one, &.two {
+			@media (max-width: @v-rghtclmn-thrshld) {
+				float: left;
+				clear: none;
+			}
+		}
+	}
+	&.nsse div.column.two {
+		background: url(/wp-content/uploads/sites/1304/2016/08/nsse_header-banner_enhanced.png) center center/95% auto no-repeat,
+		 #e6e6e6 url(/wp-content/uploads/sites/1304/2016/08/nsse_header-bg.gif) top left repeat-x;
+	}
+}
+ 
+section.row.single.article-header {
+	height: 230px;
+	div.column {
+		background: @hex-dark-gray;
+		background: linear-gradient(to right, rgba(red(@hex-white), green(@hex-white), blue(@hex-white), 0),
+		 rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0) 60%,
+		 rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 1) 60%,
+		 rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 1)),
+		 linear-gradient(@hex-dark-gray, @hex-dark-gray);
+		position: relative;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+		height: 100%;
+		& > h1 {
+			position: absolute;
+			top: 50%;
+			left: 2rem;
+			right: 40%;
+			right: ~"calc(40% + 2rem)";
+			margin-bottom: 0.35em;
+			color: @hex-white;
+			.transform(~"translateY(-50%)");
+		}
+		& > :not(h1) {
+			display: none;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			width: 10%;
+			height: 0;
+		}
+	}
+}
+ 
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### ASIDE layouts ################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Containers designed to be used as custom asides & sidebars within a div.column element.                ║
+ *  ║  ╘═» Customized here for use on the WSU Phi Beta Kappa website.                                        ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.column {
+	aside {
+		font-size: .8rem;
+		&+aside {
+			margin-top: @v-dflt-spcng;
+		}
+		p, ul {
+			font-size: inherit;
+			&:not(:last-child) {
+				margin-bottom: 0.8rem;
+			}
+			&:last-child:not(.no-bottom-pad) {
+				padding-bottom: 0;
+			}
+		}
+		&.article-sidebar {
+			background: #f8f1eb url(/wp-content/uploads/sites/907/2015/09/tileable-concrete-texture_128x128.png) left top repeat;
+			&.green-marble {
+				background: #e3dfcd url(/wp-content/uploads/sites/907/2015/09/seamless-marble-texture_528x528.png) left top repeat;
+				border: 1px solid #afa370;
+				box-shadow: 3px 3px 3px rgba(57,50,21,0.3333);
+			}
+			&.bluish-gray {
+				background: #edf3f4 url(/wp-content/uploads/sites/907/2015/09/vertically-tileable-gray-acrylic_opacity-0.15.png) left top repeat-y;
+				background-size: 100% auto;
+				border: 1px solid #464e54;
+				box-shadow: 3px 3px 3px rgba(42,48,51,0.3333);
+			}
+		}
+	}
+}
+
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### DIV layouts ##################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.                         ║
+ *  ║  ╘═» Customized here for use on the WSU Phi Beta Kappa website.                                        ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+div.column {
+	div.bluish-gray-acrylic-sidebar, div.green-marble-sidebar, div.gray-acrylic-sidebar {
+		p {
+			font-size: .75rem;
+		}
+		h2 + hr {
+			margin-top: .25rem;
+			background-color: rgba(70,78,84,0.75);
+		}
+		h3 {
+			font-size: 1.275rem;
+		}
+		h4 {
+			font-size: 1.05rem;
+		}
+	}
+}
+
+div.column {
+	&:extend(.has-dflt-font);
+	section {
+		&.header-newsEvents {
+			background: url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat left top,
+				url(/wp-content/uploads/sites/50/2015/10/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/50/2015/06/wpbg-news-events-v2.png) no-repeat center;
+		}
+	}
+}
+
+div.recent-posts {
+	padding-bottom: (@v-dflt-spcng / 2);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color: #edf3f4;
+	box-shadow: 0 1px 2px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.33);
+	& > h3.fancy.with-top-border:first-child {
+		background: linear-gradient(to right,
+		 rgba(red(@hex-crimson), green(@hex-crimson), blue(@hex-crimson), 0.075),
+		 rgba(red(@hex-crimson), green(@hex-crimson), blue(@hex-crimson), 0.075)),
+		 linear-gradient(to right, @hex-white, @hex-white);
+	}
+	a {
+		border-bottom: none;
+		box-shadow: none;
+	}
+	& + & {
+		margin-top: @v-dflt-spcng;
+	}
+}
+
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### LIST layouts #################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Containers designed to be used as custom sidebars within a div.column element.                         ║
+ *  ║  ╘═» Customized here for use on the WSU Phi Beta Kappa website.                                        ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+//     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+//     │ ++++ Custom UL selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+//     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+// TODO: Add code for cougar bullet points
