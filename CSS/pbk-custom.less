@@ -4,12 +4,14 @@
 @pbk-blue: #114e8f;
 
 body {
-	background: @pbk-blue linear-graduent(to bottom, rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0.3333), rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0)) top left/10px 100% repeat-x fixed;
+	background: @pbk-blue linear-gradient(to bottom, rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0.3333), rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0) 50%, rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0)) top left/10px 100% repeat-x fixed;
 }
 
 main {
 	background: @hex-white;
-	border-left: 1px solid @pbk-blue;
+	@media screen and (min-width: (@v-bckgrnd-thrshld + 1)) {
+		border-left: 1px solid rgba(red(@pbk-blue), green(@pbk-blue), blue(@pbk-blue), 0.5);
+	}
 }
 
 #jacket {
@@ -20,12 +22,15 @@ main {
 
 header.main-header {
 	&:extend(.has-dflt-font);
-	background: @hex-crimson url(/wp-content/uploads/sites/1304/2016/08/site-header_platinum-background_crimson.jpg) repeat scroll left top;
-	color: @hex-white !important;
+	background: @pbk-orange url(/wp-content/uploads/sites/1177/2016/08/background_main-website-header_PBK-gold.jpg) center center no-repeat scroll;
+	color: @hex-darker-gray !important;
+	@media screen and (max-width: @v-bckgrnd-thrshld) {
+		color: @pbk-blue;
+	}
 }
 
 .main-header sub:not(.unset), .main-header sup:not(.unset) {
-	color: @hex-white !important;
+	color: @hex-darker-gray !important;
 }
 
 body.page:not(.home) main.spine-blank-template > header.main-header {
