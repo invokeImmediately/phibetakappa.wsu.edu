@@ -4177,11 +4177,11 @@ div.auto-scroller ul li {
   list-style-image: none;
 }
 body {
-  background: #114e8f linear-graduent(to bottom, rgba(213, 153, 41, 0.3333), rgba(213, 153, 41, 0)) top left / 10px 100% repeat-x fixed;
+  background: #114e8f linear-gradient(to bottom, rgba(213, 153, 41, 0.3333), rgba(213, 153, 41, 0) 50%, rgba(213, 153, 41, 0)) top left / 10px 100% repeat-x fixed;
 }
 main {
   background: #fff;
-  border-left: 1px solid #114e8f;
+  border-left: 1px solid rgba(17, 78, 143, 0.5);
 }
 #jacket {
   background-repeat: no-repeat;
