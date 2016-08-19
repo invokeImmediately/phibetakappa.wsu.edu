@@ -25,12 +25,15 @@ header.main-header {
 	background: @pbk-orange url(/wp-content/uploads/sites/1177/2016/08/background_main-website-header_PBK-gold.jpg) center center no-repeat scroll;
 	color: @hex-darker-gray !important;
 	@media screen and (max-width: @v-bckgrnd-thrshld) {
-		color: @pbk-blue;
+		color: @pbk-blue !important;
 	}
 }
 
 .main-header sub:not(.unset), .main-header sup:not(.unset) {
 	color: @hex-darker-gray !important;
+	@media screen and (max-width: @v-bckgrnd-thrshld) {
+		color: @pbk-blue !important;
+	}
 }
 
 body.page:not(.home) main.spine-blank-template > header.main-header {
