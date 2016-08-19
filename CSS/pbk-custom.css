@@ -4464,12 +4464,18 @@ header.main-header {
 }
 @media screen and (max-width: 1205px) {
   header.main-header {
-    color: #114e8f;
+    color: #114e8f !important;
   }
 }
 .main-header sub:not(.unset),
 .main-header sup:not(.unset) {
   color: #464e54 !important;
+}
+@media screen and (max-width: 1205px) {
+  .main-header sub:not(.unset),
+  .main-header sup:not(.unset) {
+    color: #114e8f !important;
+  }
 }
 body.page:not(.home) main.spine-blank-template > header.main-header {
   height: 85px;
