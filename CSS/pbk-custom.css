@@ -1416,7 +1416,7 @@ div.column p.article-deck {
 div.column p.article-deck strong {
   color: #8f7e35;
 }
-p.article-tagline {
+div.column p.article-tagline {
   position: relative;
   padding-top: 0.33333333rem;
   padding-bottom: 0.33333333rem;
@@ -1427,39 +1427,39 @@ p.article-tagline {
   font-weight: 500;
 }
 @media all {
-  p.article-tagline {
+  div.column p.article-tagline {
     line-height: 1.275em;
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 1073px) {
-  p.article-tagline {
+  div.column p.article-tagline {
     font-size: 1.391258em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  p.article-tagline {
+  div.column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  p.article-tagline {
+  div.column p.article-tagline {
     font-size: 1.391258em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  p.article-tagline {
+  div.column p.article-tagline {
     font-size: 1.305em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  p.article-tagline {
+  div.column p.article-tagline {
     font-size: 1.22409em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
-  p.article-tagline {
+  div.column p.article-tagline {
     font-size: 1.14819642em;
     text-align: left;
   }
