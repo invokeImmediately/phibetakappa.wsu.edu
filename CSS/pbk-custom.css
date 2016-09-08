@@ -1418,6 +1418,9 @@ div.column p.article-deck strong {
 }
 div.column p.article-tagline {
   position: relative;
+  padding-top: 0.33333333rem;
+  padding-bottom: 0.33333333rem;
+  margin-top: 0.33333333rem;
   font-family: 'Roboto Slab', serif;
   font-size: 1.305em;
   line-height: 1.275em;
@@ -1527,6 +1530,14 @@ div.column p.article-tagline:after {
   bottom: -0.33333333rem;
   height: 1px;
   border-top: 1px solid rgba(70, 78, 84, 0.25);
+}
+h1 + div.column p.article-tagline,
+h2 + div.column p.article-tagline,
+h3 + div.column p.article-tagline,
+h4 + div.column p.article-tagline,
+h5 + div.column p.article-tagline,
+h6 + div.column p.article-tagline {
+  margin-top: 1.33333333rem;
 }
 div.column p.no-bottom-pad {
   padding-bottom: 0;
