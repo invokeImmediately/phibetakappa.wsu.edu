@@ -1315,44 +1315,44 @@ footer.article-footer div.author-info {
  *  │       already been imported.                                                                 │
  *  ├----------------------------------------------------------------------------------------------┤
  */
-p {
+div.column p {
   padding-bottom: 0;
   text-align: left;
 }
 @media all {
-  p {
+  div.column p {
     line-height: 1.275em;
     font-size: 1em;
   }
 }
 @media all and (min-width: 1073px) {
-  p {
+  div.column p {
     font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  p {
+  div.column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  p {
+  div.column p {
     font-size: 1.06609808em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  p {
+  div.column p {
     font-size: 1em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  p {
+  div.column p {
     font-size: 0.938em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
-  p {
+  div.column p {
     font-size: 0.879844em;
     text-align: left;
   }
