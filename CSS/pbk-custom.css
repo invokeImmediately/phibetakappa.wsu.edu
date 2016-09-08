@@ -16,7 +16,6 @@ div.column,
   font-family: 'Open Sans', sans-serif;
 }
 .has-alt-font,
-p.article-tagline.sans,
 span.accentuated-text {
   font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
 }
@@ -1357,64 +1356,30 @@ p {
     text-align: left;
   }
 }
-p.centered {
+@prnt &.centered {
   text-align: center;
 }
-p.align-left {
+@prnt &.align-left {
   text-align: left;
 }
-p.btm-margin-override:not(:last-child) {
+@prnt &.btm-margin-override:not(:last-child) {
   margin-bottom: 0;
 }
-p.double-margins:not(:last-child) {
+@prnt &.double-margins:not(:last-child) {
   margin-bottom: 2rem;
 }
-p.half-margins:not(:last-child) {
+@prnt &.half-margins:not(:last-child) {
   margin-bottom: 0.5rem;
 }
-p.article-deck {
-  color: #72652a;
-}
-@media all {
-  p.article-deck {
+@prnt &.article-deck {
+  @media all {
     line-height: 1.275em;
     font-size: 1.2em;
   }
-}
-@media all and (min-width: 1073px) {
-  p.article-deck {
-    font-size: 1.2793177em;
+  color: #72652a;
+  strong {
+    color: #8f7e35;
   }
-}
-@media all and (min-width: 990px) and (max-width: 1072px) {
-  p.article-deck {
-    font-size: 1.2em;
-  }
-}
-@media all and (min-width: 792px) and (max-width: 989px) {
-  p.article-deck {
-    font-size: 1.2793177em;
-  }
-}
-@media all and (min-width: 481px) and (max-width: 791px) {
-  p.article-deck {
-    font-size: 1.2em;
-  }
-}
-@media all and (min-width: 361px) and (max-width: 480px) {
-  p.article-deck {
-    font-size: 1.1256em;
-    text-align: left;
-  }
-}
-@media all and (max-width: 360px) {
-  p.article-deck {
-    font-size: 1.0558128em;
-    text-align: left;
-  }
-}
-p.article-deck strong {
-  color: #8f7e35;
 }
 p.article-tagline {
   position: relative;
@@ -1464,55 +1429,23 @@ p.article-tagline {
     text-align: left;
   }
 }
-p.article-tagline.sans {
+@prnt &.sans {
   color: #000;
   font-weight: 300;
+   > span.lead-in {
+    color: #3f6b72;
+    font-weight: 700;
+    letter-spacing: normal;
+  }
 }
-p.article-tagline.sans > span.lead-in {
-  color: #3f6b72;
-  font-weight: 700;
-  letter-spacing: normal;
-}
-@media all {
-  p.article-tagline.home {
+@prnt &.home {
+  @media all {
     line-height: 1.275em;
     font-size: 1.71000023em;
   }
 }
-@media all and (min-width: 1073px) {
-  p.article-tagline.home {
-    font-size: 1.82302796em;
-  }
-}
-@media all and (min-width: 990px) and (max-width: 1072px) {
-  p.article-tagline.home {
-    font-size: 1.71000023em;
-  }
-}
-@media all and (min-width: 792px) and (max-width: 989px) {
-  p.article-tagline.home {
-    font-size: 1.82302796em;
-  }
-}
-@media all and (min-width: 481px) and (max-width: 791px) {
-  p.article-tagline.home {
-    font-size: 1.71000023em;
-  }
-}
-@media all and (min-width: 361px) and (max-width: 480px) {
-  p.article-tagline.home {
-    font-size: 1.60398021em;
-    text-align: left;
-  }
-}
-@media all and (max-width: 360px) {
-  p.article-tagline.home {
-    font-size: 1.50453344em;
-    text-align: left;
-  }
-}
-p.article-tagline:before,
-p.article-tagline:after {
+@prnt &:before,
+		@prnt &:after {
   content: "";
   position: absolute;
   left: 50%;
@@ -1521,28 +1454,28 @@ p.article-tagline:after {
   -moz-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-p.article-tagline:before {
+@prnt &:before {
   top: -0.33333333rem;
   height: 5px;
   border-top: 5px solid rgba(70, 78, 84, 0.25);
 }
-p.article-tagline:after {
+@prnt &:after {
   bottom: -0.33333333rem;
   height: 1px;
   border-top: 1px solid rgba(70, 78, 84, 0.25);
 }
-h1 + p.article-tagline,
-h2 + p.article-tagline,
-h3 + p.article-tagline,
-h4 + p.article-tagline,
-h5 + p.article-tagline,
-h6 + p.article-tagline {
+@prnt h1 + &,
+		@prnt h2 + &,
+		@prnt h3 + &,
+		@prnt h4 + &,
+		@prnt h5 + &,
+		@prnt h6 + & {
   margin-top: 1.33333333rem;
 }
-p.no-bottom-pad {
+@prnt &.no-bottom-pad {
   padding-bottom: 0;
 }
-p.vpue-jump-bar {
+@prnt &.vpue-jump-bar {
   padding: 0 1rem 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -1551,28 +1484,28 @@ p.vpue-jump-bar {
   border-radius: 10px;
   color: #464e54;
   text-align: center;
+  span.title {
+    font-size: 1.18147448em;
+    line-height: 2em;
+    font-weight: bold;
+    font-variant: small-caps;
+  }
 }
-p.vpue-jump-bar span.title {
-  font-size: 1.18147448em;
-  line-height: 2em;
-  font-weight: bold;
-  font-variant: small-caps;
-}
-p.vpue-jump-back {
+@prnt &.vpue-jump-back {
   padding-bottom: 0.33333333rem;
   margin-bottom: 0.33333333rem;
   font-size: 0.6875rem;
 }
-p.article-media-contacts {
+@prnt &.article-media-contacts {
   padding-left: 2em;
   font-size: .8em;
   line-height: 1.275em;
   text-align: left;
 }
-p.fine-print {
+@prnt &.fine-print {
   font-size: 0.9em;
 }
-p.banner-text-gray-with-towers {
+@prnt &.banner-text-gray-with-towers {
   color: #2a3033;
   background-color: rgba(141, 149, 154, 0.5);
   border: 32px solid transparent;
@@ -1582,17 +1515,7 @@ p.banner-text-gray-with-towers {
   margin-bottom: 15px;
   padding: 7px;
 }
-@media all and (min-width: 1050px) {
-  p.banner-text-gray-with-towers {
-    font-size: 1.25rem;
-  }
-}
-@media all and (max-width: 1049px) {
-  p.banner-text-gray-with-towers {
-    font-size: 1.1725rem;
-  }
-}
-p.banner-text {
+@prnt &.banner-text {
   max-width: 800px;
   padding: 7px;
   margin-right: auto;
@@ -1602,24 +1525,24 @@ p.banner-text {
   border: 1px solid #2a3033;
   line-height: 1.275em;
   color: #2a3033;
+  .orange {
+    background-color: rgba(182, 114, 51, 0.5);
+    border: 1px solid #492e14;
+  }
+  .blue {
+    background-color: rgba(79, 134, 142, 0.5);
+    border: 1px solid #203639;
+  }
+  .yellow {
+    background-color: rgba(198, 146, 20, 0.5);
+    border: 1px solid #4f3a08;
+  }
+  .green {
+    background-color: rgba(143, 126, 53, 0.5);
+    border: 1px solid #393215;
+  }
 }
-p.banner-text.orange {
-  background-color: rgba(182, 114, 51, 0.5);
-  border: 1px solid #492e14;
-}
-p.banner-text.blue {
-  background-color: rgba(79, 134, 142, 0.5);
-  border: 1px solid #203639;
-}
-p.banner-text.yellow {
-  background-color: rgba(198, 146, 20, 0.5);
-  border: 1px solid #4f3a08;
-}
-p.banner-text.green {
-  background-color: rgba(143, 126, 53, 0.5);
-  border: 1px solid #393215;
-}
-p.banner-text-orange-with-towers {
+@prnt &.banner-text-orange-with-towers {
   margin-bottom: 15px;
   padding: 7px;
   color: #492e14;
