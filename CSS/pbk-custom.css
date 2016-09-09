@@ -3220,6 +3220,45 @@ img.shiftToRight,
 img.shift-to-right {
   float: right;
 }
+img.has-spacing.at-top {
+  margin-top: 1rem;
+}
+img.has-spacing.at-top.thick {
+  margin-top: 4rem;
+  margin-top: 2rem;
+}
+img.has-spacing.at-top.thin {
+  margin-top: 0.5rem;
+}
+img.has-spacing.at-right {
+  margin-right: 1rem;
+}
+img.has-spacing.at-right.thick {
+  margin-right: 4rem;
+  margin-right: 2rem;
+}
+img.has-spacing.at-right.thin {
+  margin-right: 0.5rem;
+}
+img.has-spacing.at-bottom {
+  margin-bottom: 1rem;
+}
+img.has-spacing.at-bottom.thick {
+  margin-bottom: 2rem;
+}
+img.has-spacing.at-bottom.thin {
+  margin-bottom: 0.5rem;
+}
+img.has-spacing.at-left {
+  margin-left: 1rem;
+}
+img.has-spacing.at-left.thick {
+  margin-left: 4rem;
+  margin-left: 2rem;
+}
+img.has-spacing.at-left.thin {
+  margin-left: 0.5rem;
+}
 img.fancy {
   border: 1px solid rgba(94, 106, 113, 0.5);
   box-shadow: 2px 2px 2px rgba(94, 106, 113, 0.5);
