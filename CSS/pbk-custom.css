@@ -3205,6 +3205,9 @@ img.width-fixed.to-160 {
 img.width-fixed.to-128 {
   width: 128px;
 }
+img.width-fixed.to-96 {
+  width: 96px;
+}
 img.shiftToCenter,
 img.shift-to-center {
   display: block;
