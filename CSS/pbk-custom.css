@@ -1631,6 +1631,9 @@ div.column p.banner-text-orange-with-towers {
 }
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
+div.article-body {
+  position: relative;
+}
 div.article-summary aside.article-sidebar,
 div.article-summary img,
 div.article-summary object,
@@ -3131,58 +3134,82 @@ cite.article-author {
  *     │ ++++ IMG selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
  */
+img {
+  height: auto;
+}
 img.autoScaled,
 img.auto-scaled {
-  height: auto;
   width: 100%;
 }
 img.autoScaled-byHeight {
   height: 100%;
   width: auto;
 }
-img.autoScaledTo90 {
-  height: auto;
-  width: 90%;
+img.autoScaledTo90,
+img.auto-scaled.to-90 {
+  width: "90%";
 }
-img.autoScaledTo80 {
-  height: auto;
-  width: 80%;
+img.autoScaledTo80,
+img.auto-scaled.to-80 {
+  width: "80%";
 }
-img.autoScaledTo70 {
-  height: auto;
-  width: 70%;
+img.autoScaledTo70,
+img.auto-scaled.to-70 {
+  width: "70%";
 }
-img.autoScaledTo60 {
-  height: auto;
-  width: 60%;
+img.autoScaledTo60,
+img.auto-scaled.to-60 {
+  width: "60%";
+}
+img.autoScaledTo50,
+img.auto-scaled.to-50 {
+  width: "50%";
+}
+img.autoScaledTo40,
+img.auto-scaled.to-40 {
+  width: "40%";
+}
+img.autoScaledTo30,
+img.auto-scaled.to-30 {
+  width: "30%";
+}
+img.autoScaledTo20,
+img.auto-scaled.to-20 {
+  width: "20%";
+}
+img.autoScaledTo10,
+img.auto-scaled.to-10 {
+  width: "10%";
 }
 img.autoScaledToHalf {
-  height: auto;
   width: 50%;
 }
-img.autoScaledTo40 {
-  height: auto;
-  width: 40%;
-}
-img.autoScaledToThird {
-  height: auto;
+img.autoScaledToThird img.auto-scaled.to-33 {
   width: 33%;
 }
-img.autoScaledTo30 {
-  height: auto;
-  width: 30%;
-}
-img.autoScaledToQuarter {
-  height: auto;
+img.autoScaledToQuarter img.auto-scaled.to-25 {
   width: 25%;
 }
-img.autoScaledTo20 {
-  height: auto;
-  width: 20%;
+img.width-fixed {
+  width: 192px;
 }
-img.autoScaledTo10 {
-  height: auto;
-  width: 10%;
+img.width-fixed.to-96 {
+  width: 96px;
+}
+img.width-fixed.to-128 {
+  width: 128px;
+}
+img.width-fixed.to-160 {
+  width: 160px;
+}
+img.width-fixed.to-192 {
+  width: 192px;
+}
+img.width-fixed.to-224 {
+  width: 224px;
+}
+img.width-fixed.to-256 {
+  width: 256px;
 }
 img.shiftToCenter,
 img.shift-to-center {
