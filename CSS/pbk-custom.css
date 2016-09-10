@@ -5,14 +5,12 @@
 }
 .has-dflt-font,
 body,
-div.column h1,
 div.column h2,
 div.column h3,
 div.column h4,
 div.column,
 header.main-header,
-div.column,
-.gform_heading h3.gform_title {
+div.column {
   font-family: 'Open Sans', sans-serif;
 }
 .has-alt-font,
@@ -869,61 +867,72 @@ div.column aside.article-sidebar h4:first-child {
     transform: none;
   }
 }
-div.column h1 {
-  padding-bottom: 0;
-  margin-top: 1.5rem;
-  margin-bottom: .75rem;
-  font-size: 2.82352941em;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: #464e54;
-}
-@media all {
-  div.column h1 {
-    line-height: 1.1em;
+@prnt : div.column
+
+// ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+// │ ++++++++ H1-H6 & HEADER selectors +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+// ├─────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+// │ Styling for h1-h6 and header elements within WSU Office of Undergraduate Education websites             │
+// │ built using the WSU Spine theme for WordPress.                                                          │
+// │  ╘═» This file assumes [//github.com/invokeImmediately/WSU-UE---CSS/color-palette.less] has             │
+// │       already been imported.                                                                            │
+// ├---------------------------------------------------------------------------------------------------------┤
+// │ ···· <h1>…</h1> selectors ············································································· │
+h1 {
+  div.column  {
+    padding-bottom: 0;
+    margin-top: 1.5rem;
+    margin-bottom: .75rem;
     font-size: 2.82352941em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #464e54;
   }
-}
-@media all and (min-width: 1073px) {
-  div.column h1 {
-    font-size: 3.01015929em;
+  @media all {
+    div.column  {
+      line-height: 1.1em;
+      font-size: 2.82352941em;
+    }
   }
-}
-@media all and (min-width: 990px) and (max-width: 1072px) {
-  div.column h1 {
-    font-size: 2.82352941em;
+  @media all and (min-width: 1073px) {
+    div.column  {
+      font-size: 3.01015929em;
+    }
   }
-}
-@media all and (min-width: 792px) and (max-width: 989px) {
-  div.column h1 {
-    font-size: 3.01015929em;
+  @media all and (min-width: 990px) and (max-width: 1072px) {
+    div.column  {
+      font-size: 2.82352941em;
+    }
   }
-}
-@media all and (min-width: 481px) and (max-width: 791px) {
-  div.column h1 {
-    font-size: 2.82352941em;
+  @media all and (min-width: 792px) and (max-width: 989px) {
+    div.column  {
+      font-size: 3.01015929em;
+    }
   }
-}
-@media all and (min-width: 361px) and (max-width: 480px) {
-  div.column h1 {
-    font-size: 2.64847059em;
-    text-align: left;
+  @media all and (min-width: 481px) and (max-width: 791px) {
+    div.column  {
+      font-size: 2.82352941em;
+    }
   }
-}
-@media all and (max-width: 360px) {
-  div.column h1 {
-    font-size: 2.48426541em;
-    text-align: left;
+  @media all and (min-width: 361px) and (max-width: 480px) {
+    div.column  {
+      font-size: 2.64847059em;
+      text-align: left;
+    }
   }
-}
-div.column h1:first-child {
-  margin-top: 0;
-}
-div.column h1 + h2 {
-  font-style: italic;
-}
-div.column h1.centered {
-  text-align: center;
+  @media all and (max-width: 360px) {
+    div.column  {
+      font-size: 2.48426541em;
+      text-align: left;
+    }
+  }
+  div.column .centered {
+    text-align: center;
+  }
+  div.column :first-child,
+  div.column header:first-child +  {
+    margin-top: 0;
+  }
 }
 div.column h2 {
   padding: 0 0 0 .1em;
@@ -974,6 +983,47 @@ div.column h2 {
     text-align: left;
   }
 }
+@media all {
+  div.column h2.article-title {
+    line-height: 1.1em;
+    font-size: 1.44941176em;
+  }
+}
+@media all and (min-width: 1073px) {
+  div.column h2.article-title {
+    font-size: 1.5452151em;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  div.column h2.article-title {
+    font-size: 1.44941176em;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  div.column h2.article-title {
+    font-size: 1.5452151em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  div.column h2.article-title {
+    font-size: 1.44941176em;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  div.column h2.article-title {
+    font-size: 1.35954824em;
+    text-align: left;
+  }
+}
+@media all and (max-width: 360px) {
+  div.column h2.article-title {
+    font-size: 1.27525624em;
+    text-align: left;
+  }
+}
+div.column h2.centered {
+  text-align: center;
+}
 div.column h2.fancy {
   position: relative;
   padding: 0.3333rem 0.5rem;
@@ -999,36 +1049,27 @@ div.column h2.fancy.with-top-border::before {
   border-bottom: 1px solid rgba(70, 78, 84, 0.3333);
   border-top-width: 2px;
 }
-div.column h2.centered {
-  text-align: center;
-}
 div.column h2.narrower-top-margin {
   margin-top: 1.25rem;
 }
 div.column h2.no-top-margin {
   margin-top: 0;
 }
-@media all and (max-width: 480px) {
-  div.column h2.article-title {
-    font-size: 1.3125rem;
-  }
-}
-@media all and (max-width: 1208px) and (min-width: 481px) {
-  div.column h2.article-title {
-    font-size: 1.5rem;
-  }
-}
-div.column h2:first-child {
+div.column h2:first-child,
+div.column header:first-child + h2,
+div.column header:first-child + h2.fancy.with-top-border:not(:first-child) {
   margin-top: 0;
 }
-div.column hr:not(.subSection) + h2 {
+div.column h1 + h2 {
+  font-style: italic;
+}
+h2 div.column hr:not(.subSection) + h2 {
   margin-top: 0;
 }
 h2.article-title a {
   border-bottom: none;
 }
-div.column h3,
-.gform_heading h3.gform_title {
+div.column h3 {
   padding: 0 0 0 .1em;
   margin-top: 1.5rem;
   margin-bottom: .75rem;
@@ -1039,57 +1080,47 @@ div.column h3,
   color: #981e32;
 }
 @media all {
-  div.column h3,
-  .gform_heading h3.gform_title {
+  div.column h3 {
     line-height: 1.1em;
     font-size: 1.6em;
   }
 }
 @media all and (min-width: 1073px) {
-  div.column h3,
-  .gform_heading h3.gform_title {
+  div.column h3 {
     font-size: 1.70575693em;
   }
 }
 @media all and (min-width: 990px) and (max-width: 1072px) {
-  div.column h3,
-  .gform_heading h3.gform_title {
+  div.column h3 {
     font-size: 1.6em;
   }
 }
 @media all and (min-width: 792px) and (max-width: 989px) {
-  div.column h3,
-  .gform_heading h3.gform_title {
+  div.column h3 {
     font-size: 1.70575693em;
   }
 }
 @media all and (min-width: 481px) and (max-width: 791px) {
-  div.column h3,
-  .gform_heading h3.gform_title {
+  div.column h3 {
     font-size: 1.6em;
   }
 }
 @media all and (min-width: 361px) and (max-width: 480px) {
-  div.column h3,
-  .gform_heading h3.gform_title {
+  div.column h3 {
     font-size: 1.5008em;
     text-align: left;
   }
 }
 @media all and (max-width: 360px) {
-  div.column h3,
-  .gform_heading h3.gform_title {
+  div.column h3 {
     font-size: 1.4077504em;
     text-align: left;
   }
 }
-div.column h3.no-top-margin,
-.gform_heading h3.gform_title.no-top-margin {
-  margin-top: 0;
+div.column h3.centered {
+  text-align: center;
 }
-div.column h3.fancy,
-div.column h4.fancy,
-.gform_heading h3.gform_title.fancy {
+div.column h3.fancy {
   position: relative;
   padding: 0.3333rem 0.5rem;
   margin-left: 0;
@@ -1097,19 +1128,13 @@ div.column h4.fancy,
   margin-right: 0;
   background-color: rgba(219, 120, 121, 0.075);
 }
-div.column h3.fancy.with-top-border,
-div.column h4.fancy.with-top-border,
-.gform_heading h3.gform_title.fancy.with-top-border {
+div.column h3.fancy.with-top-border {
   padding-top: 0.4375rem;
 }
-div.column h3.fancy.with-top-border:not(:first-child),
-div.column h4.fancy.with-top-border:not(:first-child),
-.gform_heading h3.gform_title.fancy.with-top-border:not(:first-child) {
+div.column h3.fancy.with-top-border:not(:first-child) {
   margin-top: 2rem;
 }
-div.column h3.fancy.with-top-border::before,
-div.column h4.fancy.with-top-border::before,
-.gform_heading h3.gform_title.fancy.with-top-border::before {
+div.column h3.fancy.with-top-border::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1119,14 +1144,15 @@ div.column h4.fancy.with-top-border::before,
   border-top: 1px solid rgba(152, 30, 50, 0.67);
   border-bottom: 1px solid rgba(152, 30, 50, 0.375);
 }
-div.column h3.centered,
-.gform_heading h3.gform_title.centered {
-  text-align: center;
+div.column h3.gray {
+  color: #464e54;
 }
-div.column h3:first-child,
-.gform_heading h3.gform_title:first-child {
+div.column h3.no-top-margin {
   margin-top: 0;
 }
+div.column h3:first-child,
+div.column header:first-child + h3,
+div.column header:first-child + h3.fancy.with-top-border:not(:first-child),
 div.column hr:not(.subSection) + h3 {
   margin-top: 0;
 }
@@ -1176,16 +1202,16 @@ div.column h4 {
     text-align: left;
   }
 }
-div.column h4:first-child {
-  margin-top: 0;
-}
 div.column h4.centered {
   text-align: center;
 }
-div.column h3.gray,
-div.column h4.gray,
-.gform_heading h3.gform_title.gray {
+div.column h4.gray {
   color: #464e54;
+}
+div.column h4:first-child,
+div.column header:first-child + h4,
+div.column hr:not(.subSection) + h4 {
+  margin-top: 0;
 }
 div.column h1.crimson,
 div.column h2.crimson {
