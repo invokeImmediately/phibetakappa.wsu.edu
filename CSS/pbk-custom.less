@@ -2,6 +2,7 @@
 
 @pbk-orange: #d59929;
 @pbk-blue: #114e8f;
+@pbk-bright-blue: #4781be;
 
 body {
 	background: @pbk-blue linear-gradient(to bottom, rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0.3333), rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0) 50%, rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0)) top left/10px 100% repeat-x fixed;
@@ -252,4 +253,22 @@ div.recent-posts {
 //     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
 //     │ ++++ Custom UL selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 //     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
-// TODO: Add code for cougar bullet points
+div.column ul {
+    li { list-style-image: url(/wp-content/uploads/sites/1177/2016/09/icon_bullet-point_wsu-shield_10x12.png); }
+}
+
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### SPAN layouts #################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Containers designed to be used as custom spans within a div.column element.                            ║
+ *  ║  ╘═» Customized here for use on the WSU Phi Beta Kappa website.                                        ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+ */
+span {
+	&.recipient-name {
+		font-weight: bold;
+	}
+	&.recipient-major {
+		color: @pbk-bright-blue;
+	}
+}
