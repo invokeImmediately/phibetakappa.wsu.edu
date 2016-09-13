@@ -1108,30 +1108,6 @@ div.column h3 {
 div.column h3.centered {
   text-align: center;
 }
-div.column h3.fancy {
-  position: relative;
-  padding: 0.3333rem 0.5rem;
-  margin-left: 0;
-  margin-bottom: 1rem;
-  margin-right: 0;
-  background-color: rgba(219, 120, 121, 0.075);
-}
-div.column h3.fancy.with-top-border {
-  padding-top: 0.4375rem;
-}
-div.column h3.fancy.with-top-border:not(:first-child) {
-  margin-top: 2rem;
-}
-div.column h3.fancy.with-top-border::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  border-top: 1px solid rgba(152, 30, 50, 0.67);
-  border-bottom: 1px solid rgba(152, 30, 50, 0.375);
-}
 div.column h3.gray {
   color: #464e54;
 }
@@ -1143,6 +1119,38 @@ div.column header:first-child + h3,
 div.column header:first-child + h3.fancy.with-top-border:not(:first-child),
 div.column hr:not(.subSection) + h3 {
   margin-top: 0;
+}
+div.column h3.fancy,
+div.column h4.fancy,
+.gform_heading h3.gform_title.fancy {
+  position: relative;
+  padding: 0.3333rem 0.5rem;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  margin-right: 0;
+  background-color: rgba(219, 120, 121, 0.075);
+}
+div.column h3.fancy.with-top-border,
+div.column h4.fancy.with-top-border,
+.gform_heading h3.gform_title.fancy.with-top-border {
+  padding-top: 0.4375rem;
+}
+div.column h3.fancy.with-top-border:not(:first-child),
+div.column h4.fancy.with-top-border:not(:first-child),
+.gform_heading h3.gform_title.fancy.with-top-border:not(:first-child) {
+  margin-top: 2rem;
+}
+div.column h3.fancy.with-top-border::before,
+div.column h4.fancy.with-top-border::before,
+.gform_heading h3.gform_title.fancy.with-top-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-top: 1px solid rgba(152, 30, 50, 0.67);
+  border-bottom: 1px solid rgba(152, 30, 50, 0.375);
 }
 div.column h4 {
   padding: 0;
