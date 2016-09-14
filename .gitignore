@@ -1,4 +1,12 @@
-# Windows image file caches
+# ===========================
+# Local Files and Directories
+# ===========================
+node_modules
+
+# =========================
+# Windows OS
+# =========================
+# Image file caches
 Thumbs.db
 ehthumbs.db
 
@@ -18,16 +26,12 @@ $RECYCLE.BIN/
 *.lnk
 
 # =========================
-# Operating System Files
-# =========================
-
 # OSX
 # =========================
 
 .DS_Store
 .AppleDouble
 .LSOverride
-
 # Thumbnails
 ._*
 
