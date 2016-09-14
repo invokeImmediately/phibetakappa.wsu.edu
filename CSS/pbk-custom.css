@@ -1581,6 +1581,141 @@ p.article-tagline {
 						blue(@hex-darker-gray), 0.25);
 		}*/
 }
+@media all {
+  section.row.single div.column p.article-tagline {
+    line-height: 1.275em;
+    font-size: 1.305em;
+  }
+}
+@media all and (min-width: 1073px) {
+  section.row.single div.column p.article-tagline {
+    font-size: 1.391258em;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  section.row.single div.column p.article-tagline {
+    font-size: 1.305em;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  section.row.single div.column p.article-tagline {
+    font-size: 1.391258em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  section.row.single div.column p.article-tagline {
+    font-size: 1.305em;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  section.row.single div.column p.article-tagline {
+    font-size: 1.22409em;
+    text-align: left;
+  }
+}
+@media all and (max-width: 360px) {
+  section.row.single div.column p.article-tagline {
+    font-size: 1.14819642em;
+    text-align: left;
+  }
+}
+@media all {
+  section.row.side-right div.column p.article-tagline,
+  section.row.side-left div.column p.article-tagline,
+  section.row.halves div.column p.article-tagline {
+    line-height: 1.275em;
+    font-size: 1.305em;
+  }
+}
+@media all and (min-width: 1073px) {
+  section.row.side-right div.column p.article-tagline,
+  section.row.side-left div.column p.article-tagline,
+  section.row.halves div.column p.article-tagline {
+    font-size: 1.305em;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  section.row.side-right div.column p.article-tagline,
+  section.row.side-left div.column p.article-tagline,
+  section.row.halves div.column p.article-tagline {
+    font-size: 1.305em;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  section.row.side-right div.column p.article-tagline,
+  section.row.side-left div.column p.article-tagline,
+  section.row.halves div.column p.article-tagline {
+    font-size: 1.305em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  section.row.side-right div.column p.article-tagline,
+  section.row.side-left div.column p.article-tagline,
+  section.row.halves div.column p.article-tagline {
+    font-size: 1.305em;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  section.row.side-right div.column p.article-tagline,
+  section.row.side-left div.column p.article-tagline,
+  section.row.halves div.column p.article-tagline {
+    font-size: 1.22409em;
+    text-align: left;
+  }
+}
+@media all and (max-width: 360px) {
+  section.row.side-right div.column p.article-tagline,
+  section.row.side-left div.column p.article-tagline,
+  section.row.halves div.column p.article-tagline {
+    font-size: 1.14819642em;
+    text-align: left;
+  }
+}
+@media all {
+  section.row.thirds div.column p.article-tagline,
+  section.row.quarters div.column p.article-tagline {
+    line-height: 1.275em;
+    font-size: 1.305em;
+  }
+}
+@media all and (min-width: 1073px) {
+  section.row.thirds div.column p.article-tagline,
+  section.row.quarters div.column p.article-tagline {
+    font-size: 1.305em;
+  }
+}
+@media all and (min-width: 990px) and (max-width: 1072px) {
+  section.row.thirds div.column p.article-tagline,
+  section.row.quarters div.column p.article-tagline {
+    font-size: 1.22409em;
+  }
+}
+@media all and (min-width: 792px) and (max-width: 989px) {
+  section.row.thirds div.column p.article-tagline,
+  section.row.quarters div.column p.article-tagline {
+    font-size: 1.305em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 791px) {
+  section.row.thirds div.column p.article-tagline,
+  section.row.quarters div.column p.article-tagline {
+    font-size: 1.22409em;
+  }
+}
+@media all and (min-width: 361px) and (max-width: 480px) {
+  section.row.thirds div.column p.article-tagline,
+  section.row.quarters div.column p.article-tagline {
+    font-size: 1.14819642em;
+    text-align: left;
+  }
+}
+@media all and (max-width: 360px) {
+  section.row.thirds div.column p.article-tagline,
+  section.row.quarters div.column p.article-tagline {
+    font-size: 1.14819642em;
+    text-align: left;
+  }
+}
 div.column p.article-tagline {
   font-family: 'Roboto Slab', serif;
   font-size: 1.305em;
