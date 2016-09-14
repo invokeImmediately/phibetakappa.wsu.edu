@@ -1251,6 +1251,11 @@ div.column p {
     text-align: left;
   }
 }
+section.row.side-right div.column p,
+section.row.side-left div.column p,
+section.row.halves div.column p {
+  color: black;
+}
 div.column p.centered {
   text-align: center;
 }
