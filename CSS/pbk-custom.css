@@ -441,6 +441,10 @@ aside { /*    &:not(:first-child).widget header {
     }*/
 }
 
+aside.widget {
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 0 2px rgba(0, 0, 0, 0.2), 3px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
 aside.widget + aside.widget {
 	margin-top: 2rem;
 }
@@ -1673,12 +1677,8 @@ div.column ul li.no-bottom-pad {
 	padding-bottom: 0;
 }
 
-div.column p + ul {
+@prnt p + & {
 	margin-top: 1rem;
-}
-
-ul.external-links li {
-	list-style-image: url(/wp-content/uploads/sites/906/2015/08/external-link-bullet.png);
 }
 
 ul.content-boxes {
@@ -1719,6 +1719,10 @@ ul.content-boxes > li > div.content {
 
 ul.content-boxes > li + li {
 	margin-top: 2rem;
+}
+
+ul.external-links li {
+	list-style-image: url(/wp-content/uploads/sites/906/2015/08/external-link-bullet.png);
 }
 
 ul.cascaded-layout > li.cascade-sizer,
@@ -1867,6 +1871,10 @@ div.column a:hover {
 div.column a.subtle-link {
 	border-bottom: 0.0625em solid rgba(152, 30, 50, 0);
 	box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0);
+}
+
+div.column a.subtle-link.no-highlight:hover {
+	background-color: rgba(239, 120, 121, 0);
 }
 
 div.column a.pop-out-link {
@@ -4253,7 +4261,20 @@ div.column p.banner-text-orange-with-towers {
 	font-size: 1.25em;
 }
 
-div.column ul {
+section.row.single div.column ul {
+	line-height: 1.275em;
+	font-size: 1em;
+}
+
+section.row.side-right div.column ul,
+section.row.side-left div.column ul,
+section.row.halves div.column ul {
+	line-height: 1.275em;
+	font-size: 1em;
+}
+
+section.row.thirds div.column ul,
+section.row.quarters div.column ul {
 	line-height: 1.275em;
 	font-size: 1em;
 }
@@ -4413,8 +4434,21 @@ div.column p.banner-text-orange-with-towers {
 	text-align: left;
 }
 
-div.column ul {
+section.row.single div.column ul {
 	font-size: 0.938em;
+	text-align: left;
+}
+
+section.row.side-right div.column ul,
+section.row.side-left div.column ul,
+section.row.halves div.column ul {
+	font-size: 0.938em;
+	text-align: left;
+}
+
+section.row.thirds div.column ul,
+section.row.quarters div.column ul {
+	font-size: 0.879844em;
 	text-align: left;
 }
 
@@ -4725,8 +4759,19 @@ div.column p.banner-text-orange-with-towers {
 	font-size: 1.25em;
 }
 
-div.column ul {
+section.row.single div.column ul {
 	font-size: 1em;
+}
+
+section.row.side-right div.column ul,
+section.row.side-left div.column ul,
+section.row.halves div.column ul {
+	font-size: 1em;
+}
+
+section.row.thirds div.column ul,
+section.row.quarters div.column ul {
+	font-size: 0.938em;
 }
 
 ul.content-boxes > li p {
@@ -4904,8 +4949,19 @@ div.column p.banner-text-orange-with-towers {
 	font-size: 1.3326226em;
 }
 
-div.column ul {
+section.row.single div.column ul {
 	font-size: 1.06609808em;
+}
+
+section.row.side-right div.column ul,
+section.row.side-left div.column ul,
+section.row.halves div.column ul {
+	font-size: 1em;
+}
+
+section.row.thirds div.column ul,
+section.row.quarters div.column ul {
+	font-size: 1em;
 }
 
 ul.content-boxes > li p {
@@ -5109,8 +5165,19 @@ div.column p.banner-text-orange-with-towers {
 	font-size: 1.25em;
 }
 
-div.column ul {
+section.row.single div.column ul {
 	font-size: 1em;
+}
+
+section.row.side-right div.column ul,
+section.row.side-left div.column ul,
+section.row.halves div.column ul {
+	font-size: 1em;
+}
+
+section.row.thirds div.column ul,
+section.row.quarters div.column ul {
+	font-size: 0.938em;
 }
 
 ul.content-boxes > li p {
@@ -5334,8 +5401,19 @@ div.column p.banner-text-orange-with-towers {
 	font-size: 1.3326226em;
 }
 
-div.column ul {
+section.row.single div.column ul {
 	font-size: 1.06609808em;
+}
+
+section.row.side-right div.column ul,
+section.row.side-left div.column ul,
+section.row.halves div.column ul {
+	font-size: 1em;
+}
+
+section.row.thirds div.column ul,
+section.row.quarters div.column ul {
+	font-size: 1em;
 }
 
 ul.content-boxes > li p {
@@ -5901,7 +5979,20 @@ div.column p.banner-text-orange-with-towers {
 	text-align: left;
 }
 
-div.column ul {
+section.row.single div.column ul {
+	font-size: 0.879844em;
+	text-align: left;
+}
+
+section.row.side-right div.column ul,
+section.row.side-left div.column ul,
+section.row.halves div.column ul {
+	font-size: 0.879844em;
+	text-align: left;
+}
+
+section.row.thirds div.column ul,
+section.row.quarters div.column ul {
 	font-size: 0.879844em;
 	text-align: left;
 }
