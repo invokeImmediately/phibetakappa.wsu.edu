@@ -4284,7 +4284,20 @@ ul.content-boxes > li p {
 	font-size: 0.938em;
 }
 
-div.column ol {
+section.row.single div.column ol {
+	line-height: 1.275em;
+	font-size: 1em;
+}
+
+section.row.side-right div.column ol,
+section.row.side-left div.column ol,
+section.row.halves div.column ol {
+	line-height: 1.275em;
+	font-size: 1em;
+}
+
+section.row.thirds div.column ol,
+section.row.quarters div.column ol {
 	line-height: 1.275em;
 	font-size: 1em;
 }
@@ -4457,8 +4470,21 @@ ul.content-boxes > li p {
 	text-align: left;
 }
 
-div.column ol {
+section.row.single div.column ol {
 	font-size: 0.938em;
+	text-align: left;
+}
+
+section.row.side-right div.column ol,
+section.row.side-left div.column ol,
+section.row.halves div.column ol {
+	font-size: 0.938em;
+	text-align: left;
+}
+
+section.row.thirds div.column ol,
+section.row.quarters div.column ol {
+	font-size: 0.879844em;
 	text-align: left;
 }
 
@@ -4778,8 +4804,19 @@ ul.content-boxes > li p {
 	font-size: 0.938em;
 }
 
-div.column ol {
+section.row.single div.column ol {
 	font-size: 1em;
+}
+
+section.row.side-right div.column ol,
+section.row.side-left div.column ol,
+section.row.halves div.column ol {
+	font-size: 1em;
+}
+
+section.row.thirds div.column ol,
+section.row.quarters div.column ol {
+	font-size: 0.938em;
 }
 
 div.column dl.faq dt {
@@ -4968,8 +5005,19 @@ ul.content-boxes > li p {
 	font-size: 1em;
 }
 
-div.column ol {
+section.row.single div.column ol {
 	font-size: 1.06609808em;
+}
+
+section.row.side-right div.column ol,
+section.row.side-left div.column ol,
+section.row.halves div.column ol {
+	font-size: 1em;
+}
+
+section.row.thirds div.column ol,
+section.row.quarters div.column ol {
+	font-size: 1em;
 }
 
 div.column dl.faq dt {
@@ -5184,8 +5232,19 @@ ul.content-boxes > li p {
 	font-size: 0.938em;
 }
 
-div.column ol {
+section.row.single div.column ol {
 	font-size: 1em;
+}
+
+section.row.side-right div.column ol,
+section.row.side-left div.column ol,
+section.row.halves div.column ol {
+	font-size: 1em;
+}
+
+section.row.thirds div.column ol,
+section.row.quarters div.column ol {
+	font-size: 0.938em;
 }
 
 div.column dl.faq dt {
@@ -5420,8 +5479,19 @@ ul.content-boxes > li p {
 	font-size: 1em;
 }
 
-div.column ol {
+section.row.single div.column ol {
 	font-size: 1.06609808em;
+}
+
+section.row.side-right div.column ol,
+section.row.side-left div.column ol,
+section.row.halves div.column ol {
+	font-size: 1em;
+}
+
+section.row.thirds div.column ol,
+section.row.quarters div.column ol {
+	font-size: 1em;
 }
 
 div.column dl.faq dt {
@@ -6002,7 +6072,20 @@ ul.content-boxes > li p {
 	text-align: left;
 }
 
-div.column ol {
+section.row.single div.column ol {
+	font-size: 0.879844em;
+	text-align: left;
+}
+
+section.row.side-right div.column ol,
+section.row.side-left div.column ol,
+section.row.halves div.column ol {
+	font-size: 0.879844em;
+	text-align: left;
+}
+
+section.row.thirds div.column ol,
+section.row.quarters div.column ol {
 	font-size: 0.879844em;
 	text-align: left;
 }
