@@ -2390,45 +2390,6 @@ div.column table.plain tbody tr:nth-of-type(2n) td {
 	vertical-align: top;
 }
 
-div.column table.award-recipients {
-	background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
-	border-collapse: separate;
-	border-spacing: 0;
-	border-top: 1px solid #5e6a71;
-	border-bottom: 1px solid #5e6a71;
-}
-
-div.column table.award-recipients thead tr th {
-	padding-top: .25rem;
-	padding-left: .25rem;
-	padding-bottom: .25rem;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #B6BCBF;
-	text-align: inherit;
-}
-
-div.column table.award-recipients tbody tr td {
-	padding-top: .25rem;
-	padding-left: .25rem;
-	padding-bottom: .25rem;
-	background-color: #fff;
-	border-top: 1px solid #eff0f1;
-	border-bottom: 1px solid #d7dadb;
-	text-align: inherit;
-	vertical-align: top;
-}
-
-div.column table.award-recipients tbody:nth-of-type(2n) tr td {
-	padding-top: .25rem;
-	padding-left: .25rem;
-	padding-bottom: .25rem;
-	background-color: #eff0f1;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #b5babe;
-	text-align: inherit;
-	vertical-align: top;
-}
-
 div.column table.peopleList {
 	width: 100%;
 	background: #fff;
@@ -4805,49 +4766,12 @@ span.hides-from-rghtclmn {
 
 }
 
-@media screen and (max-width: 695px), screen and (min-width: 990px) and (max-width: 895px) {
-
-div.column table.navigational-map {
-	display: block;
-}
-
-div.column table.navigational-map thead,
-div.column table.navigational-map tr,
-div.column table.navigational-map th {
-	display: block;
-}
-
-div.column table.navigational-map tbody {
-	display: none;
-}
-
-div.column table.navigational-map th {
-	border: none;
-	text-align: center;
-	text-transform: none;
-}
-
-div.column table.navigational-map th.table-spacer,
-div.column table.navigational-map th br {
-	display: none;
-}
-
-}
-
 @media all and (max-width: 791px) and (min-width: 592px) {
 
 div.interactively-flipped-panels div.container {
 	width: 80%;
 	padding-bottom: 64%;
 	padding-bottom: calc(((50% * 0.8) * 0.8 - 1.5em) * 2 + 3em);
-}
-
-}
-
-@media (min-width: 792px) and (max-width: 1049px) {
-
-div.column .large-format-friendly {
-	max-width: 792px;
 }
 
 }
@@ -5030,6 +4954,14 @@ header.main-header div.header-group.centered {
 
 }
 
+@media (min-width: 792px) and (max-width: 1049px) {
+
+div.column .large-format-friendly {
+	max-width: 792px;
+}
+
+}
+
 @media all and (min-width: 891px) {
 
 div.column table.wsu-blue-theme {
@@ -5059,6 +4991,14 @@ section.row.single.large-format-friendly div.column.one {
 
 header.main-header.centered {
 	text-align: left;
+}
+
+}
+
+@media all and (min-width: 990px) {
+
+span.hides-from-spine {
+	display: none;
 }
 
 }
@@ -5217,20 +5157,25 @@ div.column .gform_wrapper {
 
 }
 
-@media all and (min-width: 990px) {
-
-span.hides-from-spine {
-	display: none;
-}
-
-}
-
 @media all and (max-width: 1030px) and (min-width: 792px) {
 
 div.interactively-flipped-panels div.container {
 	width: 70%;
 	padding-bottom: 56%;
 	padding-bottom: calc(((50% * 0.7) * 0.8 - 1.5em) * 2 + 3em);
+}
+
+}
+
+@media all and (min-width: 1050px) {
+
+section.side-right.pad-top.large-format-friendly div.column.two:before,
+section.row.side-right.pad-top.large-format-friendly div.column.two:before {
+	top: 1rem;
+}
+
+div.column p.banner-text-gray-with-towers {
+	font-size: 1.25em;
 }
 
 }
@@ -5268,19 +5213,6 @@ div.column .large-format-friendly {
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 800px;
-}
-
-}
-
-@media all and (min-width: 1050px) {
-
-section.side-right.pad-top.large-format-friendly div.column.two:before,
-section.row.side-right.pad-top.large-format-friendly div.column.two:before {
-	top: 1rem;
-}
-
-div.column p.banner-text-gray-with-towers {
-	font-size: 1.25em;
 }
 
 }
