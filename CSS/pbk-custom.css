@@ -725,6 +725,11 @@ div.column h2.crimson {
 	color: #981e32;
 }
 
+body.blog div.column header.article-header + * {
+	padding-top: 15px;
+	border-top: 1px solid rgba(127, 127, 127, 0.2);
+}
+
 header.main-header span.sup-header-default {
 	margin-bottom: .5rem;
 	font-size: .9rem;
@@ -843,7 +848,8 @@ div.column h2 + p.article-tagline,
 div.column h3 + p.article-tagline,
 div.column h4 + p.article-tagline,
 div.column h5 + p.article-tagline,
-div.column h6 + p.article-tagline {
+div.column h6 + p.article-tagline,
+.gform_heading h3.gform_title + p.article-tagline {
 	margin-top: 1.33333333rem;
 }
 
@@ -877,6 +883,11 @@ div.column p.vpue-jump-back {
 div.column p.article-media-contacts {
 	padding-left: 2em;
 	text-align: left;
+}
+
+body.single-post div.column p.article-media-contacts + :not(.article-media-contacts) {
+	padding-top: 15px;
+	border-top: 1px solid rgba(127, 127, 127, 0.2);
 }
 
 div.column p.fine-print {
@@ -4032,7 +4043,7 @@ div.column h2 {
 
 div.column h2.article-title {
 	line-height: 1.1em;
-	font-size: 1.24235294em;
+	font-size: 0.82823529em;
 }
 
 div.column h3 {
@@ -4048,7 +4059,7 @@ div.column h4 {
 div.column header.article-header h1.article-title,
 div.column header.article-header h2.article-title {
 	line-height: 1.1em;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 header.main-header span.sub-header-default {
@@ -4227,7 +4238,7 @@ div.column h2 {
 }
 
 div.column h2.article-title {
-	font-size: 1.16532706em;
+	font-size: 0.77688471em;
 	text-align: left;
 }
 
@@ -4243,7 +4254,7 @@ div.column h4 {
 
 div.column header.article-header h1.article-title,
 div.column header.article-header h2.article-title {
-	font-size: 1.876em;
+	font-size: 1.407em;
 	text-align: left;
 }
 
@@ -4586,7 +4597,7 @@ div.column h2 {
 }
 
 div.column h2.article-title {
-	font-size: 1.24235294em;
+	font-size: 0.82823529em;
 }
 
 div.column h3 {
@@ -4599,7 +4610,7 @@ div.column h4 {
 
 div.column header.article-header h1.article-title,
 div.column header.article-header h2.article-title {
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 section.row.single div.column p {
@@ -4787,7 +4798,7 @@ div.column h2 {
 }
 
 div.column h2.article-title {
-	font-size: 1.32447009em;
+	font-size: 0.88298006em;
 }
 
 div.column h3 {
@@ -4800,7 +4811,7 @@ div.column h4 {
 
 div.column header.article-header h1.article-title,
 div.column header.article-header h2.article-title {
-	font-size: 2.13219616em;
+	font-size: 1.59914712em;
 }
 
 section.row.single div.column p {
@@ -5014,7 +5025,7 @@ div.column h2 {
 }
 
 div.column h2.article-title {
-	font-size: 1.24235294em;
+	font-size: 0.82823529em;
 }
 
 div.column h3 {
@@ -5027,7 +5038,7 @@ div.column h4 {
 
 div.column header.article-header h1.article-title,
 div.column header.article-header h2.article-title {
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 section.row.single div.column p {
@@ -5261,7 +5272,7 @@ div.column h2 {
 }
 
 div.column h2.article-title {
-	font-size: 1.32447009em;
+	font-size: 0.88298006em;
 }
 
 div.column h3 {
@@ -5274,7 +5285,7 @@ div.column h4 {
 
 div.column header.article-header h1.article-title,
 div.column header.article-header h2.article-title {
-	font-size: 2.13219616em;
+	font-size: 1.59914712em;
 }
 
 section.row.single div.column p {
@@ -5815,7 +5826,7 @@ div.column h2 {
 }
 
 div.column h2.article-title {
-	font-size: 1.09307678em;
+	font-size: 0.72871785em;
 	text-align: left;
 }
 
@@ -5831,7 +5842,7 @@ div.column h4 {
 
 div.column header.article-header h1.article-title,
 div.column header.article-header h2.article-title {
-	font-size: 1.759688em;
+	font-size: 1.319766em;
 	text-align: left;
 }
 
