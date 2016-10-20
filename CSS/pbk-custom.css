@@ -368,7 +368,12 @@ main section.row > div.column > section > ol:not(.no-btm-margin),
 main section.row > div.column > article > div.article-body > section > ol:not(.no-btm-margin),
 main section.row > div.column > article > div.article-summary > section > ol:not(.no-btm-margin),
 main section.row > div.column > section > section > ol:not(.no-btm-margin),
-main section.row > div.column table > tbody > tr > td > section > ol:not(.no-btm-margin) {
+main section.row > div.column table > tbody > tr > td > section > ol:not(.no-btm-margin),
+main section.row > div.column > div.gform_wrapper li.gfield_html > p:not(:last-child),
+main section.row > div.column > article > div.article-body > div.gform_wrapper li.gfield_html > p:not(:last-child),
+main section.row > div.column > article > div.article-summary > div.gform_wrapper li.gfield_html > p:not(:last-child),
+main section.row > div.column > section > div.gform_wrapper li.gfield_html > p:not(:last-child),
+main section.row > div.column table > tbody > tr > td > div.gform_wrapper li.gfield_html > p:not(:last-child) {
 	margin-bottom: 1rem;
 }
 
@@ -2125,7 +2130,8 @@ span.accentuated-text.gray.brighter {
 	color: #6a7880;
 }
 
-span.has-tool-tip {
+span.has-tool-tip,
+span.has-tooltip {
 	margin-bottom: -3px;
 	border-bottom: 1px dotted rgba(0, 165, 189, 0.25);
 	color: #00a5bd;
@@ -2137,7 +2143,8 @@ span.has-tool-tip {
 	-webkit-transition-timing-function: ease, ease, ease;
 }
 
-span.has-tool-tip:hover {
+span.has-tool-tip:hover,
+span.has-tooltip:hover {
 	background-color: rgba(0, 165, 189, 0.2);
 	border-color: rgba(0, 165, 189, 0.67);
 	color: #2f5055;
@@ -2540,11 +2547,11 @@ div.column table.wsu-gray-theme > tbody > tr:nth-child(2n + 1) > td {
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
 
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### INPUT FORMS ########################################################################### ║
- *  ╠==============================================================================================╣
- *  ║ Styling applied to input elements to which the gravity form classes have been applied.       ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+ *  ║ #### INPUT FORMS ##################################################################################### ║
+ *  ╠========================================================================================================╣
+ *  ║ Styling applied to input elements to which the gravity form classes have been applied.                 ║
+ *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 
 input.read-more-state {
@@ -2625,6 +2632,7 @@ div.column .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container
 }
 
 div.column .gform_wrapper .gsection {
+	margin-top: 2rem;
 	margin-bottom: 0;
 }
 
@@ -2675,6 +2683,11 @@ div.column .gform_wrapper #extensions_message {
 	padding-left: 1rem;
 }
 
+div.column .gform_wrapper h2.fancy {
+	margin-right: 0;
+	margin-left: 0;
+}
+
 div.column li.gfield > div.ginput_complex > span > label {
 	color: #8e7f88;
 }
@@ -2723,6 +2736,14 @@ div.column li.gfield.uses-rich-editor div.tmce-active div.mce-statusbar {
 	display: none;
 }
 
+div.column li.gfield.uses-rich-editor iframe {
+	width: 100% !important;
+}
+
+div.column li.gfield.uses-rich-editor span.gp-word-count-label {
+	margin-top: 0 !important;
+}
+
 div.column li.gfield div.ginput_container_textarea > textarea {
 	font-size: 16px;
 	font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
@@ -2750,7 +2771,7 @@ div.column ul.gform_fields.top_label > li.gfield > div.ginput_complex {
 	margin-top: 0;
 }
 
-div.column ul.gform_fields.top_label > li.gfield + li.gfield,
+div.column ul.gform_fields.top_label > li.gfield + li.gfield:not(.gsection),
 div.column ul.gform_fields.top_label li.gfield:first-child {
 	margin-top: 0.5rem;
 }
@@ -3036,6 +3057,7 @@ div.column ul.gform_fields > li.gfield.gfield_contains_required ul.gfield_radio:
 	padding: 5px 35px 5px 10px;
 	overflow: hidden;
 	border-width: 0 0 1px;
+	border-top-right-radius: 7px;
 	font-weight: 700;
 }
 
@@ -3086,6 +3108,9 @@ div.column ul.gform_fields > li.gfield.gfield_contains_required ul.gfield_radio:
 
 .qtip-default {
 	border: 1px solid #F1D031;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+	border-bottom-left-radius: 7px;
 	background-color: #FFFFA3;
 	color: #555;
 }
@@ -3184,6 +3209,7 @@ div.column ul.gform_fields > li.gfield.gfield_contains_required ul.gfield_radio:
 	background-color: #d3e1e3;
 	border-color: #203639;
 	color: #2f5055;
+	box-shadow: 3px 3px 6px rgba(47, 80, 85, 0.3);
 }
 
 .qtip-blue .qtip-titlebar {
@@ -4723,6 +4749,14 @@ div.interactively-flipped-panels div.container {
 
 }
 
+@media only screen and (min-width: 641px) {
+
+div.column .gform_wrapper.gf_browser_chrome .gform_body {
+	width: calc(100% + 15px);
+}
+
+}
+
 @media all and (min-width: 694px) {
 
 section.thirds img.show-when-adjacent {
@@ -4756,6 +4790,30 @@ div.interactively-flipped-panels div.container {
 	width: 80%;
 	padding-bottom: 64%;
 	padding-bottom: calc(((50% * 0.8) * 0.8 - 1.5em) * 2 + 3em);
+}
+
+}
+
+@media (min-width: 792px) and (max-width: 989px) {
+
+section.single.large-format-friendly div.column.one,
+section.row.single.large-format-friendly div.column.one {
+	float: none;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 800px;
+}
+
+header.main-header.centered {
+	text-align: center;
+}
+
+header.main-header div.header-group.centered {
+	width: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
 }
 
 }
@@ -4919,30 +4977,6 @@ div.column dl.faq dt {
 
 }
 
-@media (min-width: 792px) and (max-width: 989px) {
-
-section.single.large-format-friendly div.column.one,
-section.row.single.large-format-friendly div.column.one {
-	float: none;
-	margin-right: auto;
-	margin-left: auto;
-	max-width: 800px;
-}
-
-header.main-header.centered {
-	text-align: center;
-}
-
-header.main-header div.header-group.centered {
-	width: 100%;
-	left: 50%;
-	transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-}
-
-}
-
 @media (min-width: 792px) and (max-width: 1049px) {
 
 div.column .large-format-friendly {
@@ -4980,14 +5014,6 @@ section.row.single.large-format-friendly div.column.one {
 
 header.main-header.centered {
 	text-align: left;
-}
-
-}
-
-@media all and (min-width: 990px) {
-
-span.hides-from-spine {
-	display: none;
 }
 
 }
@@ -5151,25 +5177,20 @@ div.column dl.faq dt {
 
 }
 
+@media all and (min-width: 990px) {
+
+span.hides-from-spine {
+	display: none;
+}
+
+}
+
 @media all and (max-width: 1030px) and (min-width: 792px) {
 
 div.interactively-flipped-panels div.container {
 	width: 70%;
 	padding-bottom: 56%;
 	padding-bottom: calc(((50% * 0.7) * 0.8 - 1.5em) * 2 + 3em);
-}
-
-}
-
-@media all and (min-width: 1050px) {
-
-section.side-right.pad-top.large-format-friendly div.column.two:before,
-section.row.side-right.pad-top.large-format-friendly div.column.two:before {
-	top: 1rem;
-}
-
-div.column p.banner-text-gray-with-towers {
-	font-size: 1.25em;
 }
 
 }
@@ -5207,6 +5228,19 @@ div.column .large-format-friendly {
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 800px;
+}
+
+}
+
+@media all and (min-width: 1050px) {
+
+section.side-right.pad-top.large-format-friendly div.column.two:before,
+section.row.side-right.pad-top.large-format-friendly div.column.two:before {
+	top: 1rem;
+}
+
+div.column p.banner-text-gray-with-towers {
+	font-size: 1.25em;
 }
 
 }
@@ -5618,6 +5652,14 @@ span.hides-with-rghtclmn {
 div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
 	top: calc(0.99em - 3px);
 	background-position: 0 -7px;
+}
+
+}
+
+@media only screen and (max-width: 640px) {
+
+div.column .gform_wrapper.gf_browser_chrome .gform_body {
+	width: 100%;
 }
 
 }
