@@ -863,13 +863,13 @@ div.column p.no-bottom-pad {
 
 div.column p.vpue-jump-bar {
 	padding: 0 1rem 1rem;
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+	margin: 2rem;
 	background-color: rgba(0, 165, 189, 0.5);
 	border: 1px solid rgba(63, 107, 114, 0.5);
 	border-radius: 10px;
 	color: #464e54;
 	text-align: center;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 div.column p.vpue-jump-bar span.title {
@@ -877,6 +877,34 @@ div.column p.vpue-jump-bar span.title {
 	line-height: 2em;
 	font-weight: bold;
 	font-variant: small-caps;
+}
+
+div.column p.vpue-jump-bar.floating {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	padding-top: 0.4rem;
+	padding-bottom: 0.75rem;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+	background-color: rgba(127, 208, 220, 0.95);
+	font-size: 0.8em !important;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	z-index: 99163;
+}
+
+div.column p.vpue-jump-bar.floating span.title {
+	display: none;
+}
+
+div.column p.vpue-jump-bar.floating br {
+	display: none;
 }
 
 div.column p.vpue-jump-back {
@@ -5458,14 +5486,6 @@ main {
 
 }
 
-@media all and (max-width: 1205px) {
-
-ul.content-boxes > li {
-	overflow-x: auto;
-}
-
-}
-
 @media screen and (max-width: 1205px) {
 
 header.main-header {
@@ -5475,6 +5495,14 @@ header.main-header {
 .main-header sub:not(.unset),
 .main-header sup:not(.unset) {
 	color: #114e8f !important;
+}
+
+}
+
+@media all and (max-width: 1205px) {
+
+ul.content-boxes > li {
+	overflow-x: auto;
 }
 
 }
@@ -5520,6 +5548,14 @@ section.side-right.row.side-right.large-format-friendly div.column.two {
 
 }
 
+@media screen and (max-width: 1049px) {
+
+img.symbolic-image img.symbolic-image {
+	width: 96px;
+}
+
+}
+
 @media all and (max-width: 1049px) {
 
 div.column p.banner-text-gray-with-towers {
@@ -5528,10 +5564,14 @@ div.column p.banner-text-gray-with-towers {
 
 }
 
-@media screen and (max-width: 1049px) {
+@media all and (max-width: 989px) {
 
-img.symbolic-image img.symbolic-image {
-	width: 96px;
+div.column p.vpue-jump-bar.floating {
+	top: 51px;
+}
+
+span.hides-with-spine {
+	display: none;
 }
 
 }
@@ -5550,14 +5590,6 @@ div.column div.builder-banner-content:hover {
 
 }
 
-@media all and (max-width: 989px) {
-
-span.hides-with-spine {
-	display: none;
-}
-
-}
-
 @media all and (max-width: 890px) {
 
 div.column table.wsu-blue-theme {
@@ -5566,14 +5598,6 @@ div.column table.wsu-blue-theme {
 
 div.column table.wsu-gray-theme {
 	font-size: 12px;
-}
-
-}
-
-@media (max-width: 791px) {
-
-header.main-header.centered {
-	text-align: left;
 }
 
 }
@@ -5590,28 +5614,10 @@ div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.r
 
 }
 
-@media screen and (max-width: 693px) {
+@media (max-width: 791px) {
 
-section.single div.column aside.article-sidebar {
-	position: absolute;
-	right: -2rem;
-	top: 0px;
-	width: 230px;
-	-webkit-transform-origin: 100% 0% 0;
-	-ms-transform-origin: 100% 0% 0;
-	transform-origin: 100% 0% 0;
-	-webkit-transform: rotate(-90deg) translateY(-2rem);
-	-moz-transform: rotate(-90deg) translateY(-2rem);
-	transform: rotate(-90deg) translateY(-2rem);
-	-webkit-transition: transform .25s ease-out;
-	-moz-transition: transform .25s ease-out;
-	transition: transform .25s ease-out;
-}
-
-section.single div.column aside.article-sidebar:hover {
-	-webkit-transform: none;
-	-moz-transform: none;
-	transform: none;
+header.main-header.centered {
+	text-align: left;
 }
 
 }
@@ -5648,6 +5654,32 @@ span.hides-with-rghtclmn {
 
 }
 
+@media screen and (max-width: 693px) {
+
+section.single div.column aside.article-sidebar {
+	position: absolute;
+	right: -2rem;
+	top: 0px;
+	width: 230px;
+	-webkit-transform-origin: 100% 0% 0;
+	-ms-transform-origin: 100% 0% 0;
+	transform-origin: 100% 0% 0;
+	-webkit-transform: rotate(-90deg) translateY(-2rem);
+	-moz-transform: rotate(-90deg) translateY(-2rem);
+	transform: rotate(-90deg) translateY(-2rem);
+	-webkit-transition: transform .25s ease-out;
+	-moz-transition: transform .25s ease-out;
+	transition: transform .25s ease-out;
+}
+
+section.single div.column aside.article-sidebar:hover {
+	-webkit-transform: none;
+	-moz-transform: none;
+	transform: none;
+}
+
+}
+
 @media only screen and (max-width: 641px) {
 
 div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
@@ -5661,23 +5693,6 @@ div.column li.gfield > div.ginput_container_select > div.chosen-container-single
 
 div.column .gform_wrapper.gf_browser_chrome .gform_body {
 	width: 100%;
-}
-
-}
-
-@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
-
-.cycle2-slideshow {
-	width: 200px;
-}
-
-.cycle2-overlay {
-	padding: 4px;
-}
-
-.cycle2-caption {
-	bottom: 4px;
-	right: 4px;
 }
 
 }
@@ -5761,81 +5776,28 @@ div.interactively-flipped-panels div.container:hover {
 
 }
 
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+
+.cycle2-slideshow {
+	width: 200px;
+}
+
+.cycle2-overlay {
+	padding: 4px;
+}
+
+.cycle2-caption {
+	bottom: 4px;
+	right: 4px;
+}
+
+}
+
 @media screen and (max-width: 360px) {
 
 div.column div.builder-section-content.cycle-slideshow {
 	margin-left: -0.5rem;
 	margin-right: -0.5rem;
-}
-
-}
-
-@media only screen and (max-width: 360px) {
-
-.gutter .column:not(.gutterless),
-.guttered {
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-}
-
-.single.gutter .column:not(.gutterless) {
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-}
-
-.halves.gutter .column.one:not(.gutterless),
-.halves.gutter .column:nth-of-type(2n+3):not(.gutterless),
-.side-left.gutter .column.one:not(.gutterless),
-.side-right.gutter .column.one:not(.gutterless) {
-	padding-right: 0.5rem;
-}
-
-.halves.gutter .column.two:not(.gutterless),
-.halves.gutter .column:nth-of-type(2n+4):not(.gutterless),
-.side-left.gutter .column.two:not(.gutterless),
-.side-right.gutter .column.two:not(.gutterless) {
-	padding-left: 0.5rem;
-}
-
-.thirds.gutter .column.one:not(.gutterless),
-.thirds.gutter .column:nth-of-type(3n+4):not(.gutterless),
-.triptych.gutter .column.one:not(.gutterless) {
-	padding-right: 0.5rem;
-}
-
-.thirds.gutter .column.two:not(.gutterless),
-.thirds.gutter .column:nth-of-type(3n+5):not(.gutterless),
-.triptych.gutter .column.two:not(.gutterless) {
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-}
-
-.thirds.gutter .column.three:not(.gutterless),
-.thirds.gutter .column:nth-of-type(3n+6):not(.gutterless),
-.triptych.gutter .column.three:not(.gutterless) {
-	padding-left: 0.5rem;
-}
-
-.quarters.gutter .column.one:not(.gutterless),
-.quarters.gutter .column:nth-of-type(4n+5):not(.gutterless) {
-	padding-right: 0.25rem;
-}
-
-.quarters.gutter .column.two:not(.gutterless),
-.quarters.gutter .column:nth-of-type(4n+6):not(.gutterless) {
-	padding-left: 0.25rem;
-	padding-right: 0.5rem;
-}
-
-.quarters.gutter .column.three:not(.gutterless),
-.quarters.gutter .column:nth-of-type(4n+7):not(.gutterless) {
-	padding-left: 0.5rem;
-	padding-right: 0.25rem;
-}
-
-.quarters.gutter .column.four:not(.gutterless),
-.quarters.gutter .column:nth-of-type(4n+8):not(.gutterless) {
-	padding-left: 0.25rem;
 }
 
 }
@@ -5999,6 +5961,76 @@ section.row.quarters div.column ol {
 
 div.column dl.faq dt {
 	font-size: 0.879844em;
+}
+
+}
+
+@media only screen and (max-width: 360px) {
+
+.gutter .column:not(.gutterless),
+.guttered {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.single.gutter .column:not(.gutterless) {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.halves.gutter .column.one:not(.gutterless),
+.halves.gutter .column:nth-of-type(2n+3):not(.gutterless),
+.side-left.gutter .column.one:not(.gutterless),
+.side-right.gutter .column.one:not(.gutterless) {
+	padding-right: 0.5rem;
+}
+
+.halves.gutter .column.two:not(.gutterless),
+.halves.gutter .column:nth-of-type(2n+4):not(.gutterless),
+.side-left.gutter .column.two:not(.gutterless),
+.side-right.gutter .column.two:not(.gutterless) {
+	padding-left: 0.5rem;
+}
+
+.thirds.gutter .column.one:not(.gutterless),
+.thirds.gutter .column:nth-of-type(3n+4):not(.gutterless),
+.triptych.gutter .column.one:not(.gutterless) {
+	padding-right: 0.5rem;
+}
+
+.thirds.gutter .column.two:not(.gutterless),
+.thirds.gutter .column:nth-of-type(3n+5):not(.gutterless),
+.triptych.gutter .column.two:not(.gutterless) {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.thirds.gutter .column.three:not(.gutterless),
+.thirds.gutter .column:nth-of-type(3n+6):not(.gutterless),
+.triptych.gutter .column.three:not(.gutterless) {
+	padding-left: 0.5rem;
+}
+
+.quarters.gutter .column.one:not(.gutterless),
+.quarters.gutter .column:nth-of-type(4n+5):not(.gutterless) {
+	padding-right: 0.25rem;
+}
+
+.quarters.gutter .column.two:not(.gutterless),
+.quarters.gutter .column:nth-of-type(4n+6):not(.gutterless) {
+	padding-left: 0.25rem;
+	padding-right: 0.5rem;
+}
+
+.quarters.gutter .column.three:not(.gutterless),
+.quarters.gutter .column:nth-of-type(4n+7):not(.gutterless) {
+	padding-left: 0.5rem;
+	padding-right: 0.25rem;
+}
+
+.quarters.gutter .column.four:not(.gutterless),
+.quarters.gutter .column:nth-of-type(4n+8):not(.gutterless) {
+	padding-left: 0.25rem;
 }
 
 }
