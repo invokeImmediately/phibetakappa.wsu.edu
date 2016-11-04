@@ -4468,15 +4468,6 @@ div.column dl.faq dt {
 
 }
 
-@media screen and (min-width: 361px) and (max-width: 480px) {
-
-div.column div.builder-section-content.cycle-slideshow {
-	margin-left: -1rem;
-	margin-right: -1rem;
-}
-
-}
-
 @media only screen and (min-width: 361px) and (max-width: 480px) {
 
 .gutter .column:not(.gutterless),
@@ -4543,6 +4534,15 @@ div.column div.builder-section-content.cycle-slideshow {
 .quarters.gutter .column.four:not(.gutterless),
 .quarters.gutter .column:nth-of-type(4n+8):not(.gutterless) {
 	padding-left: 0.5rem;
+}
+
+}
+
+@media screen and (min-width: 361px) and (max-width: 480px) {
+
+div.column div.builder-section-content.cycle-slideshow {
+	margin-left: -1rem;
+	margin-right: -1rem;
 }
 
 }
