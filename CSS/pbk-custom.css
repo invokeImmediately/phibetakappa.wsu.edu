@@ -2786,32 +2786,6 @@ div.column .gform_wrapper h2.fancy {
 	margin-left: 0;
 }
 
-div.column li.gfield > div.ginput_complex > span > label {
-	color: #8e7f88;
-}
-
-div.column li.gfield > div.ginput_container_select > div.chosen-container {
-	width: 100% !important;
-}
-
-div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single {
-	height: 1.98em;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.038) 50%, rgba(0, 0, 0, 0.07) 52%, rgba(0, 0, 0, 0.045) 100%), linear-gradient(to bottom, #fff, #fff);
-	line-height: 1.98em;
-}
-
-div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single:hover {
-	text-shadow: none;
-}
-
-div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
-	background-position: 0 calc(-10px + 1.98em / 2);
-}
-
-div.column li.gfield > div.ginput_container_select > div.chosen-container-single.chosen-with-drop > a.chosen-single {
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 20%, rgba(0, 0, 0, 0) 80%), linear-gradient(to bottom, #fff, #fff);
-}
-
 div.column li.gfield.uses-rich-editor div.tmce-active div.mce-menubar {
 	display: none;
 }
@@ -2840,6 +2814,32 @@ div.column li.gfield.uses-rich-editor iframe {
 
 div.column li.gfield.uses-rich-editor span.gp-word-count-label {
 	margin-top: 0 !important;
+}
+
+div.column li.gfield > div.ginput_complex > span > label {
+	color: #8e7f88;
+}
+
+div.column li.gfield > div.ginput_container_select > div.chosen-container {
+	width: 100% !important;
+}
+
+div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single {
+	height: 1.98em;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.038) 50%, rgba(0, 0, 0, 0.07) 52%, rgba(0, 0, 0, 0.045) 100%), linear-gradient(to bottom, #fff, #fff);
+	line-height: 1.98em;
+}
+
+div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single:hover {
+	text-shadow: none;
+}
+
+div.column li.gfield > div.ginput_container_select > div.chosen-container-single > a.chosen-single > div > b {
+	background-position: 0 calc(-10px + 1.98em / 2);
+}
+
+div.column li.gfield > div.ginput_container_select > div.chosen-container-single.chosen-with-drop > a.chosen-single {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 20%, rgba(0, 0, 0, 0) 80%), linear-gradient(to bottom, #fff, #fff);
 }
 
 div.column li.gfield div.ginput_container_textarea > textarea {
@@ -4508,15 +4508,6 @@ div.column dl.faq dt {
 
 }
 
-@media screen and (min-width: 361px) and (max-width: 480px) {
-
-div.column div.builder-section-content.cycle-slideshow {
-	margin-left: -1rem;
-	margin-right: -1rem;
-}
-
-}
-
 @media only screen and (min-width: 361px) and (max-width: 480px) {
 
 .gutter .column:not(.gutterless),
@@ -4587,28 +4578,11 @@ div.column div.builder-section-content.cycle-slideshow {
 
 }
 
-@media all and (min-width: 481px) {
+@media screen and (min-width: 361px) and (max-width: 480px) {
 
-div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.front {
-	transition-property: opacity, z-index;
-	-webkit-transition-property: opacity, z-index;
-	transition-delay: 0.5s, 0.5s;
-	-webkit-transition-delay: 0.5s, 0.5s;
-	transition-duration: 0.25s, 0.25s;
-	-webkit-transition-duration: 0.25s, 0.25s;
-	transition-timing-function: linear, step-end;
-	-webkit-transition-timing-function: linear, step-end;
-}
-
-div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
-	transition-property: opacity;
-	-webkit-transition-property: opacity;
-	transition-delay: 0.5s;
-	-webkit-transition-delay: 0.5s;
-	transition-duration: 0s;
-	-webkit-transition-duration: 0s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
+div.column div.builder-section-content.cycle-slideshow {
+	margin-left: -1rem;
+	margin-right: -1rem;
 }
 
 }
@@ -4679,6 +4653,32 @@ div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel
 .quarters.gutter .column.four:not(.gutterless),
 .quarters.gutter .column:nth-of-type(4n+8):not(.gutterless) {
 	padding-left: 1rem;
+}
+
+}
+
+@media all and (min-width: 481px) {
+
+div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.front {
+	transition-property: opacity, z-index;
+	-webkit-transition-property: opacity, z-index;
+	transition-delay: 0.5s, 0.5s;
+	-webkit-transition-delay: 0.5s, 0.5s;
+	transition-duration: 0.25s, 0.25s;
+	-webkit-transition-duration: 0.25s, 0.25s;
+	transition-timing-function: linear, step-end;
+	-webkit-transition-timing-function: linear, step-end;
+}
+
+div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
+	transition-property: opacity;
+	-webkit-transition-property: opacity;
+	transition-delay: 0.5s;
+	-webkit-transition-delay: 0.5s;
+	transition-duration: 0s;
+	-webkit-transition-duration: 0s;
+	transition-timing-function: linear;
+	-webkit-transition-timing-function: linear;
 }
 
 }
@@ -4859,6 +4859,18 @@ div.column .gform_wrapper.gf_browser_chrome .gform_body {
 	width: calc(100% + 15px);
 }
 
+div.column li.gfield.gf_left_half.expands-to-two-thirds {
+	width: 67% !important;
+}
+
+div.column li.gfield.gf_left_half.expands-to-two-thirds + li.gfield.gf_right_half {
+	width: 33% !important;
+}
+
+div.column li.gfield.has-label-spacer > div.ginput_container {
+	margin-top: 21px;
+}
+
 }
 
 @media all and (min-width: 694px) {
@@ -4918,6 +4930,22 @@ header.main-header div.header-group.centered {
 	transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
+}
+
+}
+
+@media only screen and (min-width: 792px) {
+
+div.column li.gfield.has-label-spacer > div.ginput_container {
+	margin-top: 23px;
+}
+
+}
+
+@media (min-width: 792px) and (max-width: 1049px) {
+
+div.column .large-format-friendly {
+	max-width: 792px;
 }
 
 }
@@ -5078,14 +5106,6 @@ section.row.quarters div.column ol {
 
 div.column dl.faq dt {
 	font-size: 1.06609808em;
-}
-
-}
-
-@media (min-width: 792px) and (max-width: 1049px) {
-
-div.column .large-format-friendly {
-	max-width: 792px;
 }
 
 }
@@ -5279,6 +5299,14 @@ section.row.quarters div.column ol {
 
 div.column dl.faq dt {
 	font-size: 1em;
+}
+
+}
+
+@media only screen and (min-width: 990px) {
+
+div.column li.gfield.has-label-spacer > div.ginput_container {
+	margin-top: 21px;
 }
 
 }
@@ -5540,6 +5568,14 @@ section.row.quarters div.column ol {
 
 div.column dl.faq dt {
 	font-size: 1.06609808em;
+}
+
+}
+
+@media only screen and (min-width: 1073px) {
+
+div.column li.gfield.has-label-spacer > div.ginput_container {
+	margin-top: 23px;
 }
 
 }
