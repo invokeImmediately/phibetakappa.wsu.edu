@@ -488,26 +488,57 @@ section.has-linked-columns:not(.gutter) {
 	margin-top: 1rem;
 }
 
+section.has-linked-columns:not(.gutter):last-child {
+	margin-bottom: 2rem;
+}
+
 section.has-linked-columns:not(.gutter) div.column {
 	position: relative;
 	height: 0;
-	padding-bottom: calc(50% - 2rem) !important;
-	background-position: center top;
+	padding-bottom: calc(33% - 2rem) !important;
+	background-position: center center;
 	background-size: 100% auto;
 	text-align: center;
 }
 
 section.has-linked-columns:not(.gutter) div.column > :first-child:not(header),
-section.has-linked-columns:not(.gutter) div.column > header:first-child + * {
+section.has-linked-columns:not(.gutter) div.column > header:first-child + *,
+section.has-linked-columns:not(.gutter) div.column > .shift-to-bottom:first-of-type {
 	position: absolute;
-	top: 50%;
 	left: 50%;
+	width: calc(100% - 2rem);
+	max-width: 480px;
+	word-break: break-word;
 	color: #fff;
+	text-shadow: 1px 1px 0 #000, 2px 2px 2px rgba(0, 0, 0, 0.5), 0 0 18px rgba(0, 0, 0, 0.9);
+	pointer-events: none;
+	z-index: 2;
+}
+
+section.has-linked-columns:not(.gutter) div.column > :first-child:not(header),
+section.has-linked-columns:not(.gutter) div.column > header:first-child + * {
+	top: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	pointer-events: none;
-	z-index: 2;
+}
+
+section.has-linked-columns:not(.gutter) div.column > :first-child:not(header).shift-to-top,
+section.has-linked-columns:not(.gutter) div.column > header:first-child + *.shift-to-top {
+	top: 1rem;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+section.has-linked-columns:not(.gutter) div.column > .shift-to-bottom:first-of-type {
+	bottom: 1rem;
+	border-top: 1px solid #fff;
+	margin-bottom: 0 !important;
+	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.3333) inset;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 section.has-linked-columns:not(.gutter) div.column:hover {
@@ -518,11 +549,16 @@ section.has-linked-columns:not(.gutter) div.column:hover {
 }
 
 section.has-linked-columns:not(.gutter) div.column:hover > :first-child:not(header),
-section.has-linked-columns:not(.gutter) div.column:hover > header:first-child + * {
+section.has-linked-columns:not(.gutter) div.column:hover > header:first-child + *,
+section.has-linked-columns:not(.gutter) div.column:hover > .shift-to-bottom:first-of-type {
 	color: #c60c30;
 	-webkit-transition: all 0.3s linear;
 	-moz-transition: all 0.3s linear;
 	transition: all 0.3s linear;
+}
+
+section.has-linked-columns:not(.gutter) div.column:hover > .shift-to-bottom:first-of-type {
+	border-top: 1px solid #c60c30;
 }
 
 section.has-linked-columns:not(.gutter) div.column * {
@@ -554,12 +590,28 @@ section.has-linked-columns:not(.gutter) div.column > :last-child > a:first-of-ty
 	transition: all 0.3s linear;
 }
 
+section.has-linked-columns:not(.gutter) div.column.bg-pinned-at-left {
+	background-position: left top;
+}
+
+section.has-linked-columns:not(.gutter) div.column.bg-pinned-at-right {
+	background-position: right top;
+}
+
 section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:after,
 section.has-linked-columns:not(.gutter) div.column.has-gray-bg:after,
 section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:after,
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:after,
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:after,
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:after,
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:after,
 section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:before,
 section.has-linked-columns:not(.gutter) div.column.has-gray-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:before {
+section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:before,
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:before,
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:before,
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:before,
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -572,16 +624,28 @@ section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:before {
 
 section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:before,
 section.has-linked-columns:not(.gutter) div.column.has-gray-bg:before,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:before {
+section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:before,
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:before,
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:before,
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:before,
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:before {
 	opacity: 0;
 }
 
 section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:hover:after,
 section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover:after,
 section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover:after,
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover:after,
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover:after,
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover:after,
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover:after,
 section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:hover:before,
 section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover:before {
+section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover:before,
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover:before,
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover:before,
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover:before,
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover:before {
 	-webkit-transition: all 0.3s linear;
 	-moz-transition: all 0.3s linear;
 	transition: all 0.3s linear;
@@ -589,43 +653,204 @@ section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover:before {
 
 section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:hover:after,
 section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover:after,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover:after {
+section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover:after,
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover:after,
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover:after,
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover:after,
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover:after {
 	opacity: 0;
 }
 
 section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:hover:before,
 section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover:before,
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover:before {
+section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover:before,
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover:before,
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover:before,
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover:before,
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover:before {
 	opacity: 1;
 }
 
 section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:after {
-	background: linear-gradient(to bottom, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.1) 70%, rgba(152, 30, 50, 0.9));
+	background: linear-gradient(to bottom, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, #981e32);
 }
 
 section.has-linked-columns:not(.gutter) div.column.has-crimson-bg:before {
-	background: linear-gradient(to top, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.1) 70%, rgba(152, 30, 50, 0.9));
+	background: linear-gradient(to top, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, #981e32);
 }
 
 section.has-linked-columns:not(.gutter) div.column.has-gray-bg:after {
-	background: linear-gradient(to bottom, rgba(239, 240, 241, 0), rgba(239, 240, 241, 0.1) 70%, rgba(239, 240, 241, 0.9));
+	background: linear-gradient(to bottom, rgba(181, 186, 190, 0), rgba(181, 186, 190, 0.2) 50%, #b5babe);
 }
 
 section.has-linked-columns:not(.gutter) div.column.has-gray-bg:before {
-	background: linear-gradient(to top, rgba(239, 240, 241, 0), rgba(239, 240, 241, 0.1) 70%, rgba(239, 240, 241, 0.9));
+	background: linear-gradient(to top, rgba(181, 186, 190, 0), rgba(181, 186, 190, 0.2) 50%, #b5babe);
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover > :first-child:not(header),
+section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover > header:first-child + *,
+section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover > .shift-to-bottom:first-of-type {
+	color: #b5babe;
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-gray-bg:hover > .shift-to-bottom:first-of-type {
+	border-top: 1px solid #b5babe;
 }
 
 section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:after {
-	background: linear-gradient(to bottom, rgba(255, 184, 28, 0), rgba(255, 184, 28, 0.1) 70%, rgba(255, 184, 28, 0.9));
+	background: linear-gradient(to bottom, rgba(255, 184, 28, 0), rgba(255, 184, 28, 0.2) 50%, #ffb81c);
 }
 
 section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:before {
-	background: linear-gradient(to top, rgba(255, 184, 28, 0), rgba(255, 184, 28, 0.1) 70%, rgba(255, 184, 28, 0.9));
+	background: linear-gradient(to top, rgba(255, 184, 28, 0), rgba(255, 184, 28, 0.2) 50%, #ffb81c);
 }
 
 section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover > :first-child:not(header),
-section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover > header:first-child + * {
+section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover > header:first-child + *,
+section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover > .shift-to-bottom:first-of-type {
 	color: #ffb81c;
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-yellow-bg:hover > .shift-to-bottom:first-of-type {
+	border-top: 1px solid #ffb81c;
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:after {
+	background: linear-gradient(to bottom, rgba(0, 165, 189, 0), rgba(0, 165, 189, 0.2) 50%, #00a5bd);
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:before {
+	background: linear-gradient(to top, rgba(0, 165, 189, 0), rgba(0, 165, 189, 0.2) 50%, #00a5bd);
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover > :first-child:not(header),
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover > header:first-child + *,
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover > .shift-to-bottom:first-of-type {
+	color: #00a5bd;
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-blue-bg:hover > .shift-to-bottom:first-of-type {
+	border-top: 1px solid #00a5bd;
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:after {
+	background: linear-gradient(to bottom, rgba(173, 164, 0, 0), rgba(173, 164, 0, 0.2) 50%, #ada400);
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:before {
+	background: linear-gradient(to top, rgba(173, 164, 0, 0), rgba(173, 164, 0, 0.2) 50%, #ada400);
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover > :first-child:not(header),
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover > header:first-child + *,
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover > .shift-to-bottom:first-of-type {
+	color: #ada400;
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-green-bg:hover > .shift-to-bottom:first-of-type {
+	border-top: 1px solid #ada400;
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:after {
+	background: linear-gradient(to bottom, rgba(246, 134, 31, 0), rgba(246, 134, 31, 0.2) 50%, #f6861f);
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:before {
+	background: linear-gradient(to top, rgba(246, 134, 31, 0), rgba(246, 134, 31, 0.2) 50%, #f6861f);
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover > :first-child:not(header),
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover > header:first-child + *,
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover > .shift-to-bottom:first-of-type {
+	color: #f6861f;
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-orange-bg:hover > .shift-to-bottom:first-of-type {
+	border-top: 1px solid #f6861f;
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:after {
+	background: linear-gradient(to bottom, rgba(0, 173, 164, 0), rgba(0, 173, 164, 0.2) 50%, #00ada4);
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:before {
+	background: linear-gradient(to top, rgba(0, 173, 164, 0), rgba(0, 173, 164, 0.2) 50%, #00ada4);
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover > :first-child:not(header),
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover > header:first-child + *,
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover > .shift-to-bottom:first-of-type {
+	color: #00ada4;
+}
+
+section.has-linked-columns:not(.gutter) div.column.has-cyan-bg:hover > .shift-to-bottom:first-of-type {
+	border-top: 1px solid #00ada4;
+}
+
+section.has-linked-columns:not(.gutter).thirds + section.has-linked-columns:not(.gutter).thirds.thirds {
+	border-top: 1px solid rgba(255, 255, 255, 0.7);
+	margin-top: 0 !important;
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column {
+	padding-bottom: calc(33% - 2rem) !important;
+	background-size: auto 100%;
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-crimson-bg:after {
+	background: linear-gradient(to bottom, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, #981e32 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-crimson-bg:before {
+	background: linear-gradient(to top, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 50%, #981e32 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-gray-bg:after {
+	background: linear-gradient(to bottom, rgba(181, 186, 190, 0), rgba(181, 186, 190, 0.2) 50%, #b5babe 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-gray-bg:before {
+	background: linear-gradient(to top, rgba(181, 186, 190, 0), rgba(181, 186, 190, 0.2) 50%, #b5babe 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-yellow-bg:after {
+	background: linear-gradient(to bottom, rgba(255, 184, 28, 0), rgba(255, 184, 28, 0.2) 50%, #ffb81c 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-yellow-bg:before {
+	background: linear-gradient(to top, rgba(255, 184, 28, 0), rgba(255, 184, 28, 0.2) 50%, #ffb81c 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-blue-bg:after {
+	background: linear-gradient(to bottom, rgba(0, 165, 189, 0), rgba(0, 165, 189, 0.2) 50%, #00a5bd 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-blue-bg:before {
+	background: linear-gradient(to top, rgba(0, 165, 189, 0), rgba(0, 165, 189, 0.2) 50%, #00a5bd 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-green-bg:after {
+	background: linear-gradient(to bottom, rgba(173, 164, 0, 0), rgba(173, 164, 0, 0.2) 50%, #ada400 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-green-bg:before {
+	background: linear-gradient(to top, rgba(173, 164, 0, 0), rgba(173, 164, 0, 0.2) 50%, #ada400 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-orange-bg:after {
+	background: linear-gradient(to bottom, rgba(246, 134, 31, 0), rgba(246, 134, 31, 0.2) 50%, #f6861f 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-orange-bg:before {
+	background: linear-gradient(to top, rgba(246, 134, 31, 0), rgba(246, 134, 31, 0.2) 50%, #f6861f 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-cyan-bg:after {
+	background: linear-gradient(to bottom, rgba(0, 173, 164, 0), rgba(0, 173, 164, 0.2) 50%, #00ada4 80%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-cyan-bg:before {
+	background: linear-gradient(to top, rgba(0, 173, 164, 0), rgba(0, 173, 164, 0.2) 50%, #00ada4 80%);
 }
 
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -2152,7 +2377,7 @@ div.column dl.faq.toggled dd {
 div.column a {
 	border-bottom-right-radius: 0.25em;
 	border-bottom-left-radius: 0.25em;
-	border-bottom: 0.0625em solid rgba(152, 30, 50, 0.15);
+	border-bottom: 0.0625em solid rgba(152, 30, 50, 0.7);
 	box-shadow: inset 0 -0.3125em 0 rgba(152, 30, 50, 0.15);
 	color: #981e32;
 	text-decoration: none;
@@ -4703,6 +4928,15 @@ div.column dl.faq dt {
 
 }
 
+@media screen and (min-width: 361px) and (max-width: 480px) {
+
+div.column div.builder-section-content.cycle-slideshow {
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+}
+
 @media only screen and (min-width: 361px) and (max-width: 480px) {
 
 .gutter .column:not(.gutterless),
@@ -4769,111 +5003,6 @@ div.column dl.faq dt {
 .quarters.gutter .column.four:not(.gutterless),
 .quarters.gutter .column:nth-of-type(4n+8):not(.gutterless) {
 	padding-left: 0.5rem;
-}
-
-}
-
-@media screen and (min-width: 361px) and (max-width: 480px) {
-
-div.column div.builder-section-content.cycle-slideshow {
-	margin-left: -1rem;
-	margin-right: -1rem;
-}
-
-}
-
-@media only screen and (min-width: 481px) and (max-width: 693px) {
-
-.gutter .column:not(.gutterless),
-.guttered {
-	padding-left: 2rem;
-	padding-right: 2rem;
-}
-
-.single.gutter .column:not(.gutterless) {
-	padding-left: 2rem;
-	padding-right: 2rem;
-}
-
-.halves.gutter .column.one:not(.gutterless),
-.halves.gutter .column:nth-of-type(2n+3):not(.gutterless),
-.side-left.gutter .column.one:not(.gutterless),
-.side-right.gutter .column.one:not(.gutterless) {
-	padding-right: 2rem;
-}
-
-.halves.gutter .column.two:not(.gutterless),
-.halves.gutter .column:nth-of-type(2n+4):not(.gutterless),
-.side-left.gutter .column.two:not(.gutterless),
-.side-right.gutter .column.two:not(.gutterless) {
-	padding-left: 2rem;
-}
-
-.thirds.gutter .column.one:not(.gutterless),
-.thirds.gutter .column:nth-of-type(3n+4):not(.gutterless),
-.triptych.gutter .column.one:not(.gutterless) {
-	padding-right: 2rem;
-}
-
-.thirds.gutter .column.two:not(.gutterless),
-.thirds.gutter .column:nth-of-type(3n+5):not(.gutterless),
-.triptych.gutter .column.two:not(.gutterless) {
-	padding-left: 2rem;
-	padding-right: 2rem;
-}
-
-.thirds.gutter .column.three:not(.gutterless),
-.thirds.gutter .column:nth-of-type(3n+6):not(.gutterless),
-.triptych.gutter .column.three:not(.gutterless) {
-	padding-left: 2rem;
-}
-
-.quarters.gutter .column.one:not(.gutterless),
-.quarters.gutter .column:nth-of-type(4n+5):not(.gutterless) {
-	padding-right: 1rem;
-}
-
-.quarters.gutter .column.two:not(.gutterless),
-.quarters.gutter .column:nth-of-type(4n+6):not(.gutterless) {
-	padding-left: 1rem;
-	padding-right: 2rem;
-}
-
-.quarters.gutter .column.three:not(.gutterless),
-.quarters.gutter .column:nth-of-type(4n+7):not(.gutterless) {
-	padding-left: 2rem;
-	padding-right: 1rem;
-}
-
-.quarters.gutter .column.four:not(.gutterless),
-.quarters.gutter .column:nth-of-type(4n+8):not(.gutterless) {
-	padding-left: 1rem;
-}
-
-}
-
-@media all and (min-width: 481px) {
-
-div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.front {
-	transition-property: opacity, z-index;
-	-webkit-transition-property: opacity, z-index;
-	transition-delay: 0.5s, 0.5s;
-	-webkit-transition-delay: 0.5s, 0.5s;
-	transition-duration: 0.25s, 0.25s;
-	-webkit-transition-duration: 0.25s, 0.25s;
-	transition-timing-function: linear, step-end;
-	-webkit-transition-timing-function: linear, step-end;
-}
-
-div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
-	transition-property: opacity;
-	-webkit-transition-property: opacity;
-	transition-delay: 0.5s;
-	-webkit-transition-delay: 0.5s;
-	transition-duration: 0s;
-	-webkit-transition-duration: 0s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
 }
 
 }
@@ -5038,6 +5167,102 @@ div.column dl.faq dt {
 
 }
 
+@media only screen and (min-width: 481px) and (max-width: 693px) {
+
+.gutter .column:not(.gutterless),
+.guttered {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.single.gutter .column:not(.gutterless) {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.halves.gutter .column.one:not(.gutterless),
+.halves.gutter .column:nth-of-type(2n+3):not(.gutterless),
+.side-left.gutter .column.one:not(.gutterless),
+.side-right.gutter .column.one:not(.gutterless) {
+	padding-right: 2rem;
+}
+
+.halves.gutter .column.two:not(.gutterless),
+.halves.gutter .column:nth-of-type(2n+4):not(.gutterless),
+.side-left.gutter .column.two:not(.gutterless),
+.side-right.gutter .column.two:not(.gutterless) {
+	padding-left: 2rem;
+}
+
+.thirds.gutter .column.one:not(.gutterless),
+.thirds.gutter .column:nth-of-type(3n+4):not(.gutterless),
+.triptych.gutter .column.one:not(.gutterless) {
+	padding-right: 2rem;
+}
+
+.thirds.gutter .column.two:not(.gutterless),
+.thirds.gutter .column:nth-of-type(3n+5):not(.gutterless),
+.triptych.gutter .column.two:not(.gutterless) {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.thirds.gutter .column.three:not(.gutterless),
+.thirds.gutter .column:nth-of-type(3n+6):not(.gutterless),
+.triptych.gutter .column.three:not(.gutterless) {
+	padding-left: 2rem;
+}
+
+.quarters.gutter .column.one:not(.gutterless),
+.quarters.gutter .column:nth-of-type(4n+5):not(.gutterless) {
+	padding-right: 1rem;
+}
+
+.quarters.gutter .column.two:not(.gutterless),
+.quarters.gutter .column:nth-of-type(4n+6):not(.gutterless) {
+	padding-left: 1rem;
+	padding-right: 2rem;
+}
+
+.quarters.gutter .column.three:not(.gutterless),
+.quarters.gutter .column:nth-of-type(4n+7):not(.gutterless) {
+	padding-left: 2rem;
+	padding-right: 1rem;
+}
+
+.quarters.gutter .column.four:not(.gutterless),
+.quarters.gutter .column:nth-of-type(4n+8):not(.gutterless) {
+	padding-left: 1rem;
+}
+
+}
+
+@media all and (min-width: 481px) {
+
+div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.front {
+	transition-property: opacity, z-index;
+	-webkit-transition-property: opacity, z-index;
+	transition-delay: 0.5s, 0.5s;
+	-webkit-transition-delay: 0.5s, 0.5s;
+	transition-duration: 0.25s, 0.25s;
+	-webkit-transition-duration: 0.25s, 0.25s;
+	transition-timing-function: linear, step-end;
+	-webkit-transition-timing-function: linear, step-end;
+}
+
+div.interactively-flipped-panels div.container div.panel-wrapper:hover div.panel div.rear {
+	transition-property: opacity;
+	-webkit-transition-property: opacity;
+	transition-delay: 0.5s;
+	-webkit-transition-delay: 0.5s;
+	transition-duration: 0s;
+	-webkit-transition-duration: 0s;
+	transition-timing-function: linear;
+	-webkit-transition-timing-function: linear;
+}
+
+}
+
 @media all and (max-width: 591px) and (min-width: 481px) {
 
 div.interactively-flipped-panels div.container {
@@ -5082,6 +5307,10 @@ section.thirds div.column p {
 	text-align: left;
 }
 
+section.has-linked-columns:not(.gutter) div.column:not(:first-child) {
+	border-left: 1px solid rgba(255, 255, 255, 0.7);
+}
+
 section.side-right div.column.one h2.fancy,
 section.row.side-right div.column.one h2.fancy,
 section.side-right div.column.one h3.fancy,
@@ -5091,6 +5320,14 @@ section.row.side-right div.column.one h3.fancy {
 
 span.hides-from-rghtclmn {
 	display: none;
+}
+
+}
+
+@media all and (min-width: 694px) and (max-width: 791px) {
+
+section.has-linked-columns:not(.gutter).thirds div.column {
+	padding-bottom: calc(40% - 2rem) !important;
 }
 
 }
@@ -5125,22 +5362,6 @@ header.main-header div.header-group.centered {
 	transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
-}
-
-}
-
-@media only screen and (min-width: 792px) {
-
-div.column li.gfield.has-label-spacer > div.ginput_container {
-	margin-top: 23px;
-}
-
-}
-
-@media (min-width: 792px) and (max-width: 1049px) {
-
-div.column .large-format-friendly {
-	max-width: 792px;
 }
 
 }
@@ -5305,6 +5526,22 @@ div.column dl.faq dt {
 
 }
 
+@media only screen and (min-width: 792px) {
+
+div.column li.gfield.has-label-spacer > div.ginput_container {
+	margin-top: 23px;
+}
+
+}
+
+@media (min-width: 792px) and (max-width: 1049px) {
+
+div.column .large-format-friendly {
+	max-width: 792px;
+}
+
+}
+
 @media all and (min-width: 891px) {
 
 div.column table.wsu-blue-theme {
@@ -5321,19 +5558,6 @@ div.column table.wsu-gray-theme {
 
 div.readability-controlled {
 	width: 70%;
-}
-
-}
-
-@media (min-width: 990px) and (max-width: 1049px) {
-
-section.single.large-format-friendly div.column.one,
-section.row.single.large-format-friendly div.column.one {
-	max-width: 800px;
-}
-
-header.main-header.centered {
-	text-align: left;
 }
 
 }
@@ -5514,12 +5738,38 @@ span.hides-from-spine {
 
 }
 
+@media (min-width: 990px) and (max-width: 1049px) {
+
+section.single.large-format-friendly div.column.one,
+section.row.single.large-format-friendly div.column.one {
+	max-width: 800px;
+}
+
+header.main-header.centered {
+	text-align: left;
+}
+
+}
+
 @media all and (max-width: 1030px) and (min-width: 792px) {
 
 div.interactively-flipped-panels div.container {
 	width: 70%;
 	padding-bottom: 56%;
 	padding-bottom: calc(((50% * 0.7) * 0.8 - 1.5em) * 2 + 3em);
+}
+
+}
+
+@media all and (min-width: 1050px) {
+
+section.side-right.pad-top.large-format-friendly div.column.two:before,
+section.row.side-right.pad-top.large-format-friendly div.column.two:before {
+	top: 1rem;
+}
+
+div.column p.banner-text-gray-with-towers {
+	font-size: 1.25em;
 }
 
 }
@@ -5557,19 +5807,6 @@ div.column .large-format-friendly {
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 800px;
-}
-
-}
-
-@media all and (min-width: 1050px) {
-
-section.side-right.pad-top.large-format-friendly div.column.two:before,
-section.row.side-right.pad-top.large-format-friendly div.column.two:before {
-	top: 1rem;
-}
-
-div.column p.banner-text-gray-with-towers {
-	font-size: 1.25em;
 }
 
 }
@@ -5795,6 +6032,14 @@ main {
 
 }
 
+@media all and (max-width: 1205px) {
+
+ul.content-boxes > li {
+	overflow-x: auto;
+}
+
+}
+
 @media screen and (max-width: 1205px) {
 
 header.main-header {
@@ -5804,14 +6049,6 @@ header.main-header {
 .main-header sub:not(.unset),
 .main-header sup:not(.unset) {
 	color: #114e8f !important;
-}
-
-}
-
-@media all and (max-width: 1205px) {
-
-ul.content-boxes > li {
-	overflow-x: auto;
 }
 
 }
@@ -5857,18 +6094,18 @@ section.side-right.row.side-right.large-format-friendly div.column.two {
 
 }
 
-@media all and (max-width: 1049px) {
-
-div.column p.banner-text-gray-with-towers {
-	font-size: 1.1725em;
-}
-
-}
-
 @media screen and (max-width: 1049px) {
 
 img.symbolic-image img.symbolic-image {
 	width: 96px;
+}
+
+}
+
+@media all and (max-width: 1049px) {
+
+div.column p.banner-text-gray-with-towers {
+	font-size: 1.1725em;
 }
 
 }
@@ -5921,12 +6158,56 @@ div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.r
 	font-size: 3.0088vw; /* 23.7999992370605px @ 791px screen width */
 }
 
+span.shrink-text-on-tablet {
+	font-size: 0.9em;
+}
+
 }
 
 @media (max-width: 791px) {
 
 header.main-header.centered {
 	text-align: left;
+}
+
+}
+
+@media all and (max-width: 693px) {
+
+section.thirds img.show-when-adjacent {
+	display: none;
+}
+
+section.thirds img.show-when-stacked {
+	width: 100%;
+}
+
+section.has-linked-columns:not(.gutter) div.column:not(:first-child) {
+	border-top: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column {
+	background-size: 100% auto;
+}
+
+span.hides-with-rghtclmn {
+	display: none;
+}
+
+}
+
+@media (max-width: 693px) {
+
+section.row.halves.article-header div.column.one > h1 {
+	font-size: 6.5vw;
+	right: 1rem;
+	left: 1rem;
+}
+
+section.row.halves.article-header div.column.one,
+section.row.halves.article-header div.column.two {
+	float: left;
+	clear: none;
 }
 
 }
@@ -5953,38 +6234,6 @@ section.single div.column aside.article-sidebar:hover {
 	-webkit-transform: none;
 	-moz-transform: none;
 	transform: none;
-}
-
-}
-
-@media all and (max-width: 693px) {
-
-section.thirds img.show-when-adjacent {
-	display: none;
-}
-
-section.thirds img.show-when-stacked {
-	width: 100%;
-}
-
-span.hides-with-rghtclmn {
-	display: none;
-}
-
-}
-
-@media (max-width: 693px) {
-
-section.row.halves.article-header div.column.one > h1 {
-	font-size: 6.5vw;
-	right: 1rem;
-	left: 1rem;
-}
-
-section.row.halves.article-header div.column.one,
-section.row.halves.article-header div.column.two {
-	float: left;
-	clear: none;
 }
 
 }
@@ -6098,6 +6347,42 @@ div.interactively-flipped-panels div.container:hover {
 	padding-bottom: calc((100% * 0.8) * 4);
 }
 
+span.shrink-text-on-mobile {
+	font-size: 0.9em;
+}
+
+}
+
+@media (max-width: 480px) {
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-crimson-bg:after {
+	background: linear-gradient(to bottom, rgba(152, 30, 50, 0), rgba(152, 30, 50, 0.2) 40%, #981e32 67%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-gray-bg:after {
+	background: linear-gradient(to bottom, rgba(181, 186, 190, 0), rgba(181, 186, 190, 0.2) 40%, #b5babe 67%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-yellow-bg:after {
+	background: linear-gradient(to bottom, rgba(255, 184, 28, 0), rgba(255, 184, 28, 0.2) 40%, #ffb81c 67%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-blue-bg:after {
+	background: linear-gradient(to bottom, rgba(0, 165, 189, 0), rgba(0, 165, 189, 0.2) 40%, #00a5bd 67%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-green-bg:after {
+	background: linear-gradient(to bottom, rgba(173, 164, 0, 0), rgba(173, 164, 0, 0.2) 40%, #ada400 67%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-orange-bg:after {
+	background: linear-gradient(to bottom, rgba(246, 134, 31, 0), rgba(246, 134, 31, 0.2) 40%, #f6861f 67%);
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column.has-cyan-bg:after {
+	background: linear-gradient(to bottom, rgba(0, 173, 164, 0), rgba(0, 173, 164, 0.2) 40%, #00ada4 67%);
+}
+
 }
 
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
@@ -6113,6 +6398,19 @@ div.interactively-flipped-panels div.container:hover {
 .cycle2-caption {
 	bottom: 4px;
 	right: 4px;
+}
+
+}
+
+@media all and (max-width: 400px) {
+
+section.has-linked-columns:not(.gutter).thirds div.column > :first-child:not(header).shift-to-top,
+section.has-linked-columns:not(.gutter).thirds div.column > header:first-child + *.shift-to-top {
+	top: 0.5rem;
+}
+
+section.has-linked-columns:not(.gutter).thirds div.column > .shift-to-bottom:first-of-type {
+	bottom: 0.5rem;
 }
 
 }
@@ -6183,15 +6481,6 @@ div.interactively-flipped-panels div.container:hover {
 .quarters.gutter .column.four:not(.gutterless),
 .quarters.gutter .column:nth-of-type(4n+8):not(.gutterless) {
 	padding-left: 0.25rem;
-}
-
-}
-
-@media screen and (max-width: 360px) {
-
-div.column div.builder-section-content.cycle-slideshow {
-	margin-left: -0.5rem;
-	margin-right: -0.5rem;
 }
 
 }
@@ -6356,6 +6645,15 @@ section.row.quarters div.column ol {
 
 div.column dl.faq dt {
 	font-size: 0.879844em;
+}
+
+}
+
+@media screen and (max-width: 360px) {
+
+div.column div.builder-section-content.cycle-slideshow {
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
 }
 
 }
