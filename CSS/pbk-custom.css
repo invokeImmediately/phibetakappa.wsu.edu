@@ -252,12 +252,13 @@ div.column .soft-gray-border {
 	padding-bottom: 0.33333333rem !important;
 }
 
-.has-pull-quote-bordering:not(.alt):first-child {
-	margin-top: 0.33333333rem;
-}
-
 .has-pull-quote-bordering:not(.alt):not(:first-child) {
 	margin-top: 2rem;
+}
+
+.has-pull-quote-bordering:not(.alt):first-child,
+header:first-child + .has-pull-quote-bordering:not(.alt) {
+	margin-top: 0.33333333rem;
 }
 
 .has-pull-quote-bordering:not(.alt):before,
@@ -1314,42 +1315,43 @@ div.column p.article-tagline.sans > span.lead-in {
 	letter-spacing: normal;
 }
 
-div.column p.article-tagline:not(.has-no-bordering):not(.alt) {
+p.article-tagline:not(.has-no-bordering):not(.alt) {
 	position: relative;
 	padding-top: 0.33333333rem !important;
 	padding-bottom: 0.33333333rem !important;
 }
 
-div.column p.article-tagline:not(.has-no-bordering):not(.alt):first-child {
-	margin-top: 0.33333333rem;
-}
-
-div.column p.article-tagline:not(.has-no-bordering):not(.alt):not(:first-child) {
+p.article-tagline:not(.has-no-bordering):not(.alt):not(:first-child) {
 	margin-top: 2rem;
 }
 
-div.column p.article-tagline:not(.has-no-bordering):not(.alt):before,
-div.column p.article-tagline:not(.has-no-bordering):not(.alt):after {
+p.article-tagline:not(.has-no-bordering):not(.alt):first-child,
+header:first-child + p.article-tagline:not(.has-no-bordering):not(.alt) {
+	margin-top: 0.33333333rem;
+}
+
+p.article-tagline:not(.has-no-bordering):not(.alt):before,
+p.article-tagline:not(.has-no-bordering):not(.alt):after {
 	content: "";
 	position: absolute;
 	left: 0;
 	width: 67%;
 }
 
-div.column p.article-tagline:not(.has-no-bordering):not(.alt):before {
+p.article-tagline:not(.has-no-bordering):not(.alt):before {
 	top: -0.33333333rem;
 	height: 5px;
 	border-top: 5px solid #464e54;
 }
 
-div.column p.article-tagline:not(.has-no-bordering):not(.alt):after {
+p.article-tagline:not(.has-no-bordering):not(.alt):after {
 	bottom: -0.33333333rem;
 	height: 1px;
 	width: 33%;
 	border-top: 1px solid rgba(70, 78, 84, 0.75757576);
 }
 
-div.column p.article-tagline:not(.has-no-bordering).alt {
+p.article-tagline:not(.has-no-bordering).alt {
 	position: relative;
 	padding-left: 0.75rem !important;
 	padding-right: 0.75rem !important;
@@ -1357,8 +1359,8 @@ div.column p.article-tagline:not(.has-no-bordering).alt {
 	border-left: 5px solid #464e54;
 }
 
-div.column p.article-tagline:not(.has-no-bordering).alt:before,
-div.column p.article-tagline:not(.has-no-bordering).alt:after {
+p.article-tagline:not(.has-no-bordering).alt:before,
+p.article-tagline:not(.has-no-bordering).alt:after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -1366,12 +1368,12 @@ div.column p.article-tagline:not(.has-no-bordering).alt:after {
 	height: 100%;
 }
 
-div.column p.article-tagline:not(.has-no-bordering).alt:before {
+p.article-tagline:not(.has-no-bordering).alt:before {
 	right: 1px;
 	background-color: rgba(70, 78, 84, 0.37878788);
 }
 
-div.column p.article-tagline:not(.has-no-bordering).alt:after {
+p.article-tagline:not(.has-no-bordering).alt:after {
 	right: 3px;
 	background-color: rgba(70, 78, 84, 0.75757576);
 }
@@ -4794,7 +4796,12 @@ header.main-header sub.sub-header {
 	font-size: 2.35294118rem;
 }
 
-section.row.single div.column p {
+section.row.single:not(.mimic-multi-column-sections) div.column p {
+	line-height: 1.275em;
+	font-size: 1em;
+}
+
+section.row.single.mimic-two-column-sections div.column p {
 	line-height: 1.275em;
 	font-size: 1em;
 }
@@ -4812,7 +4819,12 @@ section.row.quarters div.column p {
 	font-size: 1em;
 }
 
-section.row.single div.column p.article-deck {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
+	line-height: 1.275em;
+	font-size: 1.2em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-deck {
 	line-height: 1.275em;
 	font-size: 1.2em;
 }
@@ -4830,7 +4842,12 @@ section.row.quarters div.column p.article-deck {
 	font-size: 1.2em;
 }
 
-section.row.single div.column p.article-tagline {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
+	line-height: 1.275em;
+	font-size: 1.305em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline {
 	line-height: 1.275em;
 	font-size: 1.305em;
 }
@@ -4848,7 +4865,12 @@ section.row.quarters div.column p.article-tagline {
 	font-size: 1.305em;
 }
 
-section.row.single div.column p.article-tagline.home {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
+	line-height: 1.275em;
+	font-size: 1.71000023em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
 	line-height: 1.275em;
 	font-size: 1.71000023em;
 }
@@ -4866,7 +4888,12 @@ section.row.quarters div.column p.article-tagline.home {
 	font-size: 1.71000023em;
 }
 
-section.row.single div.column p.vpue-jump-back {
+section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
+	line-height: 1.275em;
+	font-size: 0.6875em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
 	line-height: 1.275em;
 	font-size: 0.6875em;
 }
@@ -4894,7 +4921,12 @@ div.column p.banner-text-orange-with-towers {
 	font-size: 1.25em;
 }
 
-section.row.single div.column ul {
+section.row.single:not(.mimic-multi-column-sections) div.column ul {
+	line-height: 1.275em;
+	font-size: 1em;
+}
+
+section.row.single.mimic-two-column-sections div.column ul {
 	line-height: 1.275em;
 	font-size: 1em;
 }
@@ -4917,7 +4949,12 @@ ul.content-boxes > li p {
 	font-size: 0.938em;
 }
 
-section.row.single div.column ol {
+section.row.single:not(.mimic-multi-column-sections) div.column ol {
+	line-height: 1.275em;
+	font-size: 1em;
+}
+
+section.row.single.mimic-two-column-sections div.column ol {
 	line-height: 1.275em;
 	font-size: 1em;
 }
@@ -4979,7 +5016,11 @@ header.main-header sub.sub-header {
 	font-size: 2.07022118rem;
 }
 
-section.row.single div.column p {
+section.row.single:not(.mimic-multi-column-sections) div.column p {
+	font-size: 0.938em;
+}
+
+section.row.single.mimic-two-column-sections div.column p {
 	font-size: 0.938em;
 }
 
@@ -4994,7 +5035,11 @@ section.row.quarters div.column p {
 	font-size: 0.879844em;
 }
 
-section.row.single div.column p.article-deck {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
+	font-size: 1.1256em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-deck {
 	font-size: 1.1256em;
 }
 
@@ -5009,7 +5054,11 @@ section.row.quarters div.column p.article-deck {
 	font-size: 1.0558128em;
 }
 
-section.row.single div.column p.article-tagline {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
+	font-size: 1.22409em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline {
 	font-size: 1.22409em;
 }
 
@@ -5024,7 +5073,11 @@ section.row.quarters div.column p.article-tagline {
 	font-size: 1.14819642em;
 }
 
-section.row.single div.column p.article-tagline.home {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
+	font-size: 1.60398021em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
 	font-size: 1.60398021em;
 }
 
@@ -5039,7 +5092,11 @@ section.row.quarters div.column p.article-tagline.home {
 	font-size: 1.50453344em;
 }
 
-section.row.single div.column p.vpue-jump-back {
+section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
+	font-size: 0.644875em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
 	font-size: 0.644875em;
 }
 
@@ -5062,7 +5119,11 @@ div.column p.banner-text-orange-with-towers {
 	font-size: 1.1725em;
 }
 
-section.row.single div.column ul {
+section.row.single:not(.mimic-multi-column-sections) div.column ul {
+	font-size: 0.938em;
+}
+
+section.row.single.mimic-two-column-sections div.column ul {
 	font-size: 0.938em;
 }
 
@@ -5081,7 +5142,11 @@ ul.content-boxes > li p {
 	font-size: 0.879844em;
 }
 
-section.row.single div.column ol {
+section.row.single:not(.mimic-multi-column-sections) div.column ol {
+	font-size: 0.938em;
+}
+
+section.row.single.mimic-two-column-sections div.column ol {
 	font-size: 0.938em;
 }
 
@@ -5218,7 +5283,11 @@ header.main-header sub.sub-header {
 	font-size: 2.20705882rem;
 }
 
-section.row.single div.column p {
+section.row.single:not(.mimic-multi-column-sections) div.column p {
+	font-size: 1em;
+}
+
+section.row.single.mimic-two-column-sections div.column p {
 	font-size: 1em;
 }
 
@@ -5233,7 +5302,11 @@ section.row.quarters div.column p {
 	font-size: 0.938em;
 }
 
-section.row.single div.column p.article-deck {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
+	font-size: 1.2em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-deck {
 	font-size: 1.2em;
 }
 
@@ -5248,7 +5321,11 @@ section.row.quarters div.column p.article-deck {
 	font-size: 1.1256em;
 }
 
-section.row.single div.column p.article-tagline {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
+	font-size: 1.305em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline {
 	font-size: 1.305em;
 }
 
@@ -5263,7 +5340,11 @@ section.row.quarters div.column p.article-tagline {
 	font-size: 1.22409em;
 }
 
-section.row.single div.column p.article-tagline.home {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
+	font-size: 1.71000023em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
 	font-size: 1.71000023em;
 }
 
@@ -5278,7 +5359,11 @@ section.row.quarters div.column p.article-tagline.home {
 	font-size: 1.60398021em;
 }
 
-section.row.single div.column p.vpue-jump-back {
+section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
+	font-size: 0.6875em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
 	font-size: 0.6875em;
 }
 
@@ -5301,7 +5386,11 @@ div.column p.banner-text-orange-with-towers {
 	font-size: 1.25em;
 }
 
-section.row.single div.column ul {
+section.row.single:not(.mimic-multi-column-sections) div.column ul {
+	font-size: 1em;
+}
+
+section.row.single.mimic-two-column-sections div.column ul {
 	font-size: 1em;
 }
 
@@ -5320,7 +5409,11 @@ ul.content-boxes > li p {
 	font-size: 0.938em;
 }
 
-section.row.single div.column ol {
+section.row.single:not(.mimic-multi-column-sections) div.column ol {
+	font-size: 1em;
+}
+
+section.row.single.mimic-two-column-sections div.column ol {
 	font-size: 1em;
 }
 
@@ -5582,8 +5675,12 @@ header.main-header sub.sub-header {
 	font-size: 2.35294118rem;
 }
 
-section.row.single div.column p {
+section.row.single:not(.mimic-multi-column-sections) div.column p {
 	font-size: 1.06609808em;
+}
+
+section.row.single.mimic-two-column-sections div.column p {
+	font-size: 1em;
 }
 
 section.row.side-right div.column p,
@@ -5597,8 +5694,12 @@ section.row.quarters div.column p {
 	font-size: 1em;
 }
 
-section.row.single div.column p.article-deck {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
 	font-size: 1.2793177em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-deck {
+	font-size: 1.2em;
 }
 
 section.row.side-right div.column p.article-deck,
@@ -5612,8 +5713,12 @@ section.row.quarters div.column p.article-deck {
 	font-size: 1.2em;
 }
 
-section.row.single div.column p.article-tagline {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
 	font-size: 1.391258em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline {
+	font-size: 1.305em;
 }
 
 section.row.side-right div.column p.article-tagline,
@@ -5627,8 +5732,12 @@ section.row.quarters div.column p.article-tagline {
 	font-size: 1.305em;
 }
 
-section.row.single div.column p.article-tagline.home {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
 	font-size: 1.82302796em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
+	font-size: 1.71000023em;
 }
 
 section.row.side-right div.column p.article-tagline.home,
@@ -5642,8 +5751,12 @@ section.row.quarters div.column p.article-tagline.home {
 	font-size: 1.71000023em;
 }
 
-section.row.single div.column p.vpue-jump-back {
+section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
 	font-size: 0.73294243em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
+	font-size: 0.6875em;
 }
 
 section.row.side-right div.column p.vpue-jump-back,
@@ -5665,8 +5778,12 @@ div.column p.banner-text-orange-with-towers {
 	font-size: 1.3326226em;
 }
 
-section.row.single div.column ul {
+section.row.single:not(.mimic-multi-column-sections) div.column ul {
 	font-size: 1.06609808em;
+}
+
+section.row.single.mimic-two-column-sections div.column ul {
+	font-size: 1em;
 }
 
 section.row.side-right div.column ul,
@@ -5684,8 +5801,12 @@ ul.content-boxes > li p {
 	font-size: 1em;
 }
 
-section.row.single div.column ol {
+section.row.single:not(.mimic-multi-column-sections) div.column ol {
 	font-size: 1.06609808em;
+}
+
+section.row.single.mimic-two-column-sections div.column ol {
+	font-size: 1em;
 }
 
 section.row.side-right div.column ol,
@@ -5778,7 +5899,11 @@ header.main-header sub.sub-header {
 	font-size: 2.20705882rem;
 }
 
-section.row.single div.column p {
+section.row.single:not(.mimic-multi-column-sections) div.column p {
+	font-size: 1em;
+}
+
+section.row.single.mimic-two-column-sections div.column p {
 	font-size: 1em;
 }
 
@@ -5793,7 +5918,11 @@ section.row.quarters div.column p {
 	font-size: 0.938em;
 }
 
-section.row.single div.column p.article-deck {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
+	font-size: 1.2em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-deck {
 	font-size: 1.2em;
 }
 
@@ -5808,7 +5937,11 @@ section.row.quarters div.column p.article-deck {
 	font-size: 1.1256em;
 }
 
-section.row.single div.column p.article-tagline {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
+	font-size: 1.305em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline {
 	font-size: 1.305em;
 }
 
@@ -5823,7 +5956,11 @@ section.row.quarters div.column p.article-tagline {
 	font-size: 1.22409em;
 }
 
-section.row.single div.column p.article-tagline.home {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
+	font-size: 1.71000023em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
 	font-size: 1.71000023em;
 }
 
@@ -5838,7 +5975,11 @@ section.row.quarters div.column p.article-tagline.home {
 	font-size: 1.60398021em;
 }
 
-section.row.single div.column p.vpue-jump-back {
+section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
+	font-size: 0.6875em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
 	font-size: 0.6875em;
 }
 
@@ -5861,7 +6002,11 @@ div.column p.banner-text-orange-with-towers {
 	font-size: 1.25em;
 }
 
-section.row.single div.column ul {
+section.row.single:not(.mimic-multi-column-sections) div.column ul {
+	font-size: 1em;
+}
+
+section.row.single.mimic-two-column-sections div.column ul {
 	font-size: 1em;
 }
 
@@ -5880,7 +6025,11 @@ ul.content-boxes > li p {
 	font-size: 0.938em;
 }
 
-section.row.single div.column ol {
+section.row.single:not(.mimic-multi-column-sections) div.column ol {
+	font-size: 1em;
+}
+
+section.row.single.mimic-two-column-sections div.column ol {
 	font-size: 1em;
 }
 
@@ -6060,8 +6209,12 @@ header.main-header sub.sub-header {
 	font-size: 2.35294118rem;
 }
 
-section.row.single div.column p {
+section.row.single:not(.mimic-multi-column-sections) div.column p {
 	font-size: 1.06609808em;
+}
+
+section.row.single.mimic-two-column-sections div.column p {
+	font-size: 1em;
 }
 
 section.row.side-right div.column p,
@@ -6075,8 +6228,12 @@ section.row.quarters div.column p {
 	font-size: 1em;
 }
 
-section.row.single div.column p.article-deck {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
 	font-size: 1.2793177em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-deck {
+	font-size: 1.2em;
 }
 
 section.row.side-right div.column p.article-deck,
@@ -6090,8 +6247,12 @@ section.row.quarters div.column p.article-deck {
 	font-size: 1.2em;
 }
 
-section.row.single div.column p.article-tagline {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
 	font-size: 1.391258em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline {
+	font-size: 1.305em;
 }
 
 section.row.side-right div.column p.article-tagline,
@@ -6105,8 +6266,12 @@ section.row.quarters div.column p.article-tagline {
 	font-size: 1.305em;
 }
 
-section.row.single div.column p.article-tagline.home {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
 	font-size: 1.82302796em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
+	font-size: 1.71000023em;
 }
 
 section.row.side-right div.column p.article-tagline.home,
@@ -6120,8 +6285,12 @@ section.row.quarters div.column p.article-tagline.home {
 	font-size: 1.71000023em;
 }
 
-section.row.single div.column p.vpue-jump-back {
+section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
 	font-size: 0.73294243em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
+	font-size: 0.6875em;
 }
 
 section.row.side-right div.column p.vpue-jump-back,
@@ -6143,8 +6312,12 @@ div.column p.banner-text-orange-with-towers {
 	font-size: 1.3326226em;
 }
 
-section.row.single div.column ul {
+section.row.single:not(.mimic-multi-column-sections) div.column ul {
 	font-size: 1.06609808em;
+}
+
+section.row.single.mimic-two-column-sections div.column ul {
+	font-size: 1em;
 }
 
 section.row.side-right div.column ul,
@@ -6162,8 +6335,12 @@ ul.content-boxes > li p {
 	font-size: 1em;
 }
 
-section.row.single div.column ol {
+section.row.single:not(.mimic-multi-column-sections) div.column ol {
 	font-size: 1.06609808em;
+}
+
+section.row.single.mimic-two-column-sections div.column ol {
+	font-size: 1em;
 }
 
 section.row.side-right div.column ol,
@@ -6680,7 +6857,11 @@ header.main-header sub.sub-header {
 	font-size: 2.07022118rem;
 }
 
-section.row.single div.column p {
+section.row.single:not(.mimic-multi-column-sections) div.column p {
+	font-size: 0.879844em;
+}
+
+section.row.single.mimic-two-column-sections div.column p {
 	font-size: 0.879844em;
 }
 
@@ -6695,7 +6876,11 @@ section.row.quarters div.column p {
 	font-size: 0.879844em;
 }
 
-section.row.single div.column p.article-deck {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-deck {
+	font-size: 1.0558128em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-deck {
 	font-size: 1.0558128em;
 }
 
@@ -6710,7 +6895,11 @@ section.row.quarters div.column p.article-deck {
 	font-size: 1.0558128em;
 }
 
-section.row.single div.column p.article-tagline {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline {
+	font-size: 1.14819642em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline {
 	font-size: 1.14819642em;
 }
 
@@ -6725,7 +6914,11 @@ section.row.quarters div.column p.article-tagline {
 	font-size: 1.14819642em;
 }
 
-section.row.single div.column p.article-tagline.home {
+section.row.single:not(.mimic-multi-column-sections) div.column p.article-tagline.home {
+	font-size: 1.50453344em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.article-tagline.home {
 	font-size: 1.50453344em;
 }
 
@@ -6740,7 +6933,11 @@ section.row.quarters div.column p.article-tagline.home {
 	font-size: 1.50453344em;
 }
 
-section.row.single div.column p.vpue-jump-back {
+section.row.single:not(.mimic-multi-column-sections) div.column p.vpue-jump-back {
+	font-size: 0.60489275em;
+}
+
+section.row.single.mimic-two-column-sections div.column p.vpue-jump-back {
 	font-size: 0.60489275em;
 }
 
@@ -6763,7 +6960,11 @@ div.column p.banner-text-orange-with-towers {
 	font-size: 1.099805em;
 }
 
-section.row.single div.column ul {
+section.row.single:not(.mimic-multi-column-sections) div.column ul {
+	font-size: 0.879844em;
+}
+
+section.row.single.mimic-two-column-sections div.column ul {
 	font-size: 0.879844em;
 }
 
@@ -6782,7 +6983,11 @@ ul.content-boxes > li p {
 	font-size: 0.82529367em;
 }
 
-section.row.single div.column ol {
+section.row.single:not(.mimic-multi-column-sections) div.column ol {
+	font-size: 0.879844em;
+}
+
+section.row.single.mimic-two-column-sections div.column ol {
 	font-size: 0.879844em;
 }
 
