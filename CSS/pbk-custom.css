@@ -7292,6 +7292,23 @@ section:not(.row).article-header .header-content h3 {
 	padding-left: 0;
 }
 
+ul.cascaded-layout[style] {
+	height: auto !important;
+}
+
+ul.cascaded-layout > li {
+	position: relative !important;
+	display: block !important;
+	left: 0 !important;
+	top: auto !important;
+	width: 100% !important;
+	float: left;
+}
+
+div.column a {
+	box-shadow: none;
+}
+
 }
 
 @-webkit-keyframes anim-fade-in-from-top {
