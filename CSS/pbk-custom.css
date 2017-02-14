@@ -3298,7 +3298,7 @@ input.read-more-state {
 	display: none;
 }
 
-input.read-more-state:checked + div.read-more-target {
+input.read-more-state:checked ~ .read-more-target {
 	margin-top: 0;
 	height: auto;
 	opacity: 1;
