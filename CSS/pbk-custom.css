@@ -855,13 +855,15 @@ footer.article-footer div.author-info {
 }
 
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
- *     │ ++++++++ .column +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     │ ++++++++ PARAGRAPHS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     ├-------------------------------------------------------------------------------------------------┤
- *     │ Styling for paragraph elements intended as children of .column elements as defined in the    │
- *     │ WSU Spine theme for WordPress.                                                                  │
- *     │  ╘═» This file assumes [//github.com/invokeImmediately/WSU-UE---CSS/color-palette.less] has     │
- *     │       already been imported.                                                                    │
+ *     │ Rule-sets for styling paragraph elements within OUE pages built using the WSU Spine theme for   │
+ *     │ WordPress.                                                                                      │
+ *     │  ╘═» This file assumes the following LESS files have been imported upstream:                    │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/animations.less                            │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/color-palette.less                         │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/fonts.less                                 │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/mixins.less                                │
  *     ├-------------------------------------------------------------------------------------------------┤
  */
 
@@ -1109,6 +1111,309 @@ body.single-post .column p.article-media-contacts + :not(.article-media-contacts
 	-webkit-border-image: url(/wp-content/uploads/sites/50/2015/09/Orange-Clock-Tower-Border-Template-v3.png) 32 32 round;
 	-o-border-image: url(/wp-content/uploads/sites/50/2015/09/Orange-Clock-Tower-Border-Template-v3.png) 32 32 round;
 	border-image: url(/wp-content/uploads/sites/50/2015/09/Orange-Clock-Tower-Border-Template-v3.png) 32 32 round;
+}
+
+/*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+ */
+
+/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+ *     │ ++++++++ LISTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *     ├-------------------------------------------------------------------------------------------------┤
+ *     │ Rule-sets for styling list elements within OUE pages built using the WSU Spine theme for        │
+ *     │ WordPress.                                                                                      │
+ *     │  ╘═» This file assumes the following LESS files have been imported upstream:                    │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/animations.less                            │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/color-palette.less                         │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/fonts.less                                 │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/mixins.less                                │
+ *     ├-------------------------------------------------------------------------------------------------┤
+ */
+
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· UNORDERED list elements ·························································· │
+ *         └-----------------------------------------------------------------------------------------┘
+ */
+
+.column ul {
+	padding-bottom: 0;
+}
+
+.column ul ol,
+.column ul ul {
+	font-size: inherit  !important;
+}
+
+.column ul.centered {
+	text-align: center;
+}
+
+.column ul + p {
+	margin-top: 1rem;
+}
+
+.column ul li {
+	line-height: inherit;
+}
+
+.column ul li.no-bottom-pad {
+	padding-bottom: 0;
+}
+
+.column p + ul {
+	margin-top: 0.5rem;
+}
+
+ul.content-boxes {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+ul.content-boxes > li {
+	position: relative;
+	min-height: 320px;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	list-style-type: none;
+}
+
+ul.content-boxes > li p.email {
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+ul.content-boxes > li > img {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 106px;
+}
+
+ul.content-boxes > li > .content {
+	position: relative;
+	left: 121px;
+	width: calc(100% - 136px);
+	min-width: 189px;
+	padding: 10px 10px 10px 5px;
+}
+
+ul.content-boxes > li + li {
+	margin-top: 2rem;
+}
+
+ul.external-links li {
+	list-style-image: url(/wp-content/uploads/sites/906/2015/08/external-link-bullet.png);
+}
+
+ul.cascaded-layout > li.cascade-sizer,
+ul.cascaded-layout > li.gutter-sizer {
+	height: 0 !important;
+	min-height: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+	background: none !important;
+	box-shadow: none !important;
+}
+
+ul.cascaded-layout > li.gutter-sizer {
+	width: 2% !important;
+}
+
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· ORDERED list elements ···························································· │
+ *         └-----------------------------------------------------------------------------------------┘
+ */
+
+.column ol {
+	padding-bottom: 0;
+}
+
+.column ol li {
+	line-height: inherit;
+}
+
+.column ol ol,
+.column ol ul {
+	font-size: inherit !important;
+}
+
+.column ol ol {
+	list-style-type: lower-alpha;
+}
+
+.column ol ol ol {
+	list-style-type: lower-roman;
+}
+
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· DEFINITION list elements and children ············································ │
+ *         └-----------------------------------------------------------------------------------------┘
+ */
+
+.column dl.faq {
+	position: relative;
+}
+
+.column dl.faq dt {
+	position: relative;
+	width: calc(100% - 52px);
+	padding: 5px 40px 5px 10px;
+	margin: 5px 0;
+	border: 1px solid #afb5b7;
+	background-color: #d7dadb;
+	font-weight: bold;
+	cursor: pointer;
+	-webkit-transition: all 0.25s linear;
+	-moz-transition: all 0.25s linear;
+	transition: all 0.25s linear;
+}
+
+.column dl.faq dt:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 0;
+	height: 0;
+	border-top: 8px solid #5e6a71;
+	border-right: 8px solid transparent;
+	border-bottom: none;
+	border-left: 8px solid transparent;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.column dl.faq dt:hover {
+	background-color: #5e6a71;
+	color: #fff;
+}
+
+.column dl.faq dt:hover:after {
+	border-top: 8px solid #fff;
+	border-right: 8px solid transparent;
+	border-bottom: none;
+	border-left: 8px solid transparent;
+}
+
+.column dl.faq dt.activated {
+	background-color: #d3b0b8;
+	color: #464e54;
+	border-color: #b87f8c;
+}
+
+.column dl.faq dt.activated:after {
+	border-top: none;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #5e6a71;
+	border-left: 8px solid transparent;
+}
+
+.column dl.faq dt.activated:hover {
+	background-color: #725764;
+	color: #fff;
+}
+
+.column dl.faq dt.activated:hover:after {
+	border-top: none;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #fff;
+	border-left: 8px solid transparent;
+}
+
+.column dl.faq.blue dt {
+	background-color: #d8ecf3;
+	border-color: #9ed0e1;
+}
+
+.column dl.faq.blue dt:hover {
+	background-color: #3f6b72;
+}
+
+.column dl.faq.blue dt.activated {
+	background-color: #d3b0b8;
+	border-color: #b87f8c;
+}
+
+.column dl.faq.blue dt.activated:hover {
+	background-color: #725764;
+}
+
+.column dl.faq dd {
+	display: block;
+	max-height: 0;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	margin-top: 0;
+	overflow: hidden;
+	opacity: 0;
+	-webkit-transition: margin 0.4s cubic-bezier(.02, .01, .47, 1), opacity 0.4s cubic-bezier(.02, .01, .47, 1);
+	-moz-transition: margin 0.4s cubic-bezier(.02, .01, .47, 1), opacity 0.4s cubic-bezier(.02, .01, .47, 1);
+	transition: margin 0.4s cubic-bezier(.02, .01, .47, 1), opacity 0.4s cubic-bezier(.02, .01, .47, 1);
+}
+
+.column dl.faq dd.revealed {
+	margin-top: 0.25rem;
+	margin-bottom: 1rem;
+	opacity: 1;
+}
+
+.column dl.faq dd > p + p {
+	margin-top: 1rem;
+}
+
+.column dl.faq dd > p + ul,
+.column dl.faq dd > p + ol {
+	margin-top: 0.5rem;
+}
+
+.column dl.faq > .expand-all-button,
+.column dl.faq > .collapse-all-button {
+	display: none;
+	position: absolute;
+	top: 0;
+	padding: 5px;
+	border: 1px solid #afb5b7;
+	background-color: #d7dadb;
+	font-family: 'Roboto Mono', monospace, sans-serif;
+	font-weight: 300;
+	cursor: pointer;
+	-webkit-transform: translateY(-100%) translateY(-5px);
+	-moz-transform: translateY(-100%) translateY(-5px);
+	transform: translateY(-100%) translateY(-5px);
+	-webkit-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+	-moz-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+	transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+.column dl.faq > .expand-all-button:hover,
+.column dl.faq > .collapse-all-button:hover {
+	background-color: #5e6a71;
+	color: #fff;
+}
+
+.column dl.faq.blue > .expand-all-button,
+.column dl.faq.blue > .collapse-all-button {
+	background-color: #d8ecf3;
+	border-color: #9ed0e1;
+}
+
+.column dl.faq.blue > .expand-all-button:hover,
+.column dl.faq.blue > .collapse-all-button:hover {
+	background-color: #3f6b72;
+}
+
+.column dl.faq > .expand-all-button {
+	left: 0;
+}
+
+.column dl.faq > .collapse-all-button {
+	right: 0;
 }
 
 /*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -1881,298 +2186,26 @@ div.recent-updates p.recent-update-3 {
 	top: 0;
 }
 
-/*
- *     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
- *     │ ++++ LIST element selectors +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+ *     │ ++++++++ MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *     ├-------------------------------------------------------------------------------------------------┤
+ *     │ Rule-sets for styling main elements within OUE pages built using the WSU Spine theme for        │
+ *     │ WordPress.                                                                                      │
+ *     │  ╘═» This file assumes the following LESS files have been imported upstream:                    │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/animations.less                            │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/color-palette.less                         │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/fonts.less                                 │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/mixins.less                                │
+ *     ├-------------------------------------------------------------------------------------------------┤
  */
 
 /*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· UNORDERED list elements ·························································· │
+ *         │ ···· Style rule-sets wrapped in INCLUSIONAL MIXINS ···································· │
  *         └-----------------------------------------------------------------------------------------┘
  */
 
-.column ul {
-	padding-bottom: 0;
-}
-
-.column ul ol,
-.column ul ul {
-	font-size: inherit  !important;
-}
-
-.column ul.centered {
-	text-align: center;
-}
-
-.column ul + p {
-	margin-top: 1rem;
-}
-
-.column ul li {
-	line-height: inherit;
-}
-
-.column ul li.no-bottom-pad {
-	padding-bottom: 0;
-}
-
-.column p + ul {
-	margin-top: 0.5rem;
-}
-
-ul.content-boxes {
-	padding-right: 0;
-	padding-left: 0;
-}
-
-ul.content-boxes > li {
-	position: relative;
-	min-height: 320px;
-	border-radius: 4px;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-	-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
-	background-color: #fff;
-	list-style-type: none;
-}
-
-ul.content-boxes > li p.email {
-	font-size: 0.9em;
-	font-weight: bold;
-}
-
-ul.content-boxes > li > img {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	width: 106px;
-}
-
-ul.content-boxes > li > .content {
-	position: relative;
-	left: 121px;
-	width: calc(100% - 136px);
-	min-width: 189px;
-	padding: 10px 10px 10px 5px;
-}
-
-ul.content-boxes > li + li {
-	margin-top: 2rem;
-}
-
-ul.external-links li {
-	list-style-image: url(/wp-content/uploads/sites/906/2015/08/external-link-bullet.png);
-}
-
-ul.cascaded-layout > li.cascade-sizer,
-ul.cascaded-layout > li.gutter-sizer {
-	height: 0 !important;
-	min-height: 0 !important;
-	padding: 0 !important;
-	border: none !important;
-	background: none !important;
-	box-shadow: none !important;
-}
-
-ul.cascaded-layout > li.gutter-sizer {
-	width: 2% !important;
-}
-
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· ORDERED list elements ···························································· │
- *         └-----------------------------------------------------------------------------------------┘
+/*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
  */
-
-.column ol {
-	padding-bottom: 0;
-}
-
-.column ol li {
-	line-height: inherit;
-}
-
-.column ol ol,
-.column ol ul {
-	font-size: inherit !important;
-}
-
-.column ol ol {
-	list-style-type: lower-alpha;
-}
-
-.column ol ol ol {
-	list-style-type: lower-roman;
-}
-
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· DEFINITION list elements and children ············································ │
- *         └-----------------------------------------------------------------------------------------┘
- */
-
-.column dl.faq {
-	position: relative;
-}
-
-.column dl.faq dt {
-	position: relative;
-	width: calc(100% - 52px);
-	padding: 5px 40px 5px 10px;
-	margin: 5px 0;
-	border: 1px solid #afb5b7;
-	background-color: #d7dadb;
-	font-weight: bold;
-	cursor: pointer;
-	-webkit-transition: all 0.25s linear;
-	-moz-transition: all 0.25s linear;
-	transition: all 0.25s linear;
-}
-
-.column dl.faq dt:after {
-	content: "";
-	position: absolute;
-	top: 50%;
-	right: 10px;
-	width: 0;
-	height: 0;
-	border-top: 8px solid #5e6a71;
-	border-right: 8px solid transparent;
-	border-bottom: none;
-	border-left: 8px solid transparent;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	transform: translateY(-50%);
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-}
-
-.column dl.faq dt:hover {
-	background-color: #5e6a71;
-	color: #fff;
-}
-
-.column dl.faq dt:hover:after {
-	border-top: 8px solid #fff;
-	border-right: 8px solid transparent;
-	border-bottom: none;
-	border-left: 8px solid transparent;
-}
-
-.column dl.faq dt.activated {
-	background-color: #d3b0b8;
-	color: #464e54;
-	border-color: #b87f8c;
-}
-
-.column dl.faq dt.activated:after {
-	border-top: none;
-	border-right: 8px solid transparent;
-	border-bottom: 8px solid #5e6a71;
-	border-left: 8px solid transparent;
-}
-
-.column dl.faq dt.activated:hover {
-	background-color: #725764;
-	color: #fff;
-}
-
-.column dl.faq dt.activated:hover:after {
-	border-top: none;
-	border-right: 8px solid transparent;
-	border-bottom: 8px solid #fff;
-	border-left: 8px solid transparent;
-}
-
-.column dl.faq.blue dt {
-	background-color: #d8ecf3;
-	border-color: #9ed0e1;
-}
-
-.column dl.faq.blue dt:hover {
-	background-color: #3f6b72;
-}
-
-.column dl.faq.blue dt.activated {
-	background-color: #d3b0b8;
-	border-color: #b87f8c;
-}
-
-.column dl.faq.blue dt.activated:hover {
-	background-color: #725764;
-}
-
-.column dl.faq dd {
-	display: block;
-	max-height: 0;
-	padding-right: 1rem;
-	padding-left: 1rem;
-	margin-top: 0;
-	overflow: hidden;
-	opacity: 0;
-	-webkit-transition: margin 0.4s cubic-bezier(.02, .01, .47, 1), opacity 0.4s cubic-bezier(.02, .01, .47, 1);
-	-moz-transition: margin 0.4s cubic-bezier(.02, .01, .47, 1), opacity 0.4s cubic-bezier(.02, .01, .47, 1);
-	transition: margin 0.4s cubic-bezier(.02, .01, .47, 1), opacity 0.4s cubic-bezier(.02, .01, .47, 1);
-}
-
-.column dl.faq dd.revealed {
-	margin-top: 0.25rem;
-	margin-bottom: 1rem;
-	opacity: 1;
-}
-
-.column dl.faq dd > p + p {
-	margin-top: 1rem;
-}
-
-.column dl.faq dd > p + ul,
-.column dl.faq dd > p + ol {
-	margin-top: 0.5rem;
-}
-
-.column dl.faq > .expand-all-button,
-.column dl.faq > .collapse-all-button {
-	display: none;
-	position: absolute;
-	top: 0;
-	padding: 5px;
-	border: 1px solid #afb5b7;
-	background-color: #d7dadb;
-	font-family: 'Roboto Mono', monospace, sans-serif;
-	font-weight: 300;
-	cursor: pointer;
-	-webkit-transform: translateY(-100%) translateY(-5px);
-	-moz-transform: translateY(-100%) translateY(-5px);
-	transform: translateY(-100%) translateY(-5px);
-	-webkit-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
-	-moz-transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
-	transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
-}
-
-.column dl.faq > .expand-all-button:hover,
-.column dl.faq > .collapse-all-button:hover {
-	background-color: #5e6a71;
-	color: #fff;
-}
-
-.column dl.faq.blue > .expand-all-button,
-.column dl.faq.blue > .collapse-all-button {
-	background-color: #d8ecf3;
-	border-color: #9ed0e1;
-}
-
-.column dl.faq.blue > .expand-all-button:hover,
-.column dl.faq.blue > .collapse-all-button:hover {
-	background-color: #3f6b72;
-}
-
-.column dl.faq > .expand-all-button {
-	left: 0;
-}
-
-.column dl.faq > .collapse-all-button {
-	right: 0;
-}
 
 /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
  *         │ ···· HYPERLINK elements contained within div.column elements ·························· │
@@ -3247,7 +3280,7 @@ div.column ul.gform_fields > li.gfield.gfield_contains_required span.address_lin
 /*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### SCRIPTING ####################################################################################### ║
  *  ╠========================================================================================================╣
- *  ║ Selectors for interactive elements that do not function as intended without the support of JavaScript. ║
+ *  ║ Rule-sets for interactive elements that do not function as intended without the support of JavaScript. ║
  *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
  */
 
@@ -6133,6 +6166,14 @@ main {
 
 }
 
+@media all and (max-width: 1205px) {
+
+ul.content-boxes > li {
+	overflow-x: auto;
+}
+
+}
+
 @media screen and (max-width: 1205px) {
 
 header.main-header {
@@ -6142,14 +6183,6 @@ header.main-header {
 .main-header sub:not(.unset),
 .main-header sup:not(.unset) {
 	color: #114e8f !important;
-}
-
-}
-
-@media all and (max-width: 1205px) {
-
-ul.content-boxes > li {
-	overflow-x: auto;
 }
 
 }
@@ -6249,6 +6282,14 @@ div.column table.wsu-gray-theme {
 
 }
 
+@media (max-width: 791px) {
+
+header.main-header.centered {
+	text-align: left;
+}
+
+}
+
 @media all and (max-width: 791px) {
 
 .interactively-flipped-panels .container .panel-wrapper .panel .front p {
@@ -6261,14 +6302,6 @@ div.column table.wsu-gray-theme {
 
 span.shrink-text-on-tablet {
 	font-size: 0.9em;
-}
-
-}
-
-@media (max-width: 791px) {
-
-header.main-header.centered {
-	text-align: left;
 }
 
 }
@@ -6299,22 +6332,6 @@ section.single div.column aside.article-sidebar:hover {
 
 }
 
-@media all and (max-width: 693px) {
-
-section.thirds img.show-when-adjacent {
-	display: none;
-}
-
-section.thirds img.show-when-stacked {
-	width: 100%;
-}
-
-span.hides-with-rghtclmn {
-	display: none;
-}
-
-}
-
 @media (max-width: 693px) {
 
 section.row.halves.article-header div.column.one > h1 {
@@ -6327,6 +6344,22 @@ section.row.halves.article-header div.column.one,
 section.row.halves.article-header div.column.two {
 	float: left;
 	clear: none;
+}
+
+}
+
+@media all and (max-width: 693px) {
+
+section.thirds img.show-when-adjacent {
+	display: none;
+}
+
+section.thirds img.show-when-stacked {
+	width: 100%;
+}
+
+span.hides-with-rghtclmn {
+	display: none;
 }
 
 }
@@ -6533,15 +6566,6 @@ span.shrink-text-on-mobile {
 
 }
 
-@media screen and (max-width: 360px) {
-
-div.column div.builder-section-content.cycle-slideshow {
-	margin-left: -0.5rem;
-	margin-right: -0.5rem;
-}
-
-}
-
 @media all and (max-width: 360px) {
 
 section.thirds .column p {
@@ -6739,6 +6763,15 @@ ul.content-boxes > li p {
 
 div.column .gform_wrapper {
 	font-size: 14.077504px;
+}
+
+}
+
+@media screen and (max-width: 360px) {
+
+div.column div.builder-section-content.cycle-slideshow {
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
 }
 
 }
