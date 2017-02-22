@@ -2093,12 +2093,20 @@ div.page-covering-notice-js {
 	text-align: center;
 }
 
+div.page-covering-notice-js.left-aligned {
+	text-align: left;
+}
+
 div.page-covering-notice-js div.notice-content {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	text-align: center;
-	transform: translate(-50%, -50%);
+	width: 100%;
+	padding: 2rem;
+	text-align: inherit;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
 }
 
 div.page-covering-notice-js div.notice-content img {
@@ -2107,12 +2115,12 @@ div.page-covering-notice-js div.notice-content img {
 
 div.page-covering-notice-js div.notice-content p {
 	font-size: 2rem !important;
-	line-height: 1.35em !important;
+	line-height: 1.275em !important;
 	text-align: inherit !important;
 }
 
 div.page-covering-notice-js div.notice-content p + p {
-	margin-top: 2.7rem !important;
+	margin-top: 1em !important;
 }
 
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -6506,6 +6514,10 @@ div.column .gform_wrapper.gf_browser_chrome .gform_body {
 .interactively-flipped-panels .container:hover {
 	padding-bottom: 320%;
 	padding-bottom: calc((100% * 0.8) * 4);
+}
+
+div.page-covering-notice-js div.notice-content p {
+	font-size: 1rem !important;
 }
 
 span.shrink-text-on-mobile {
