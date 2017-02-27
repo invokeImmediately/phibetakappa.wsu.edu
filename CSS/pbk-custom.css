@@ -366,8 +366,16 @@ div.column article.post + article.post {
 }
 
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
- *     │ ++++ SECTION selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+ *     │ ++++++++ SECTIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *     ├-------------------------------------------------------------------------------------------------┤
+ *     │ Rule-sets for styling section elements within OUE pages built using the WSU Spine theme for     │
+ *     │ WordPress.                                                                                      │
+ *     │  ╘═» This file assumes the following LESS files have been imported upstream:                    │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/animations.less                            │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/color-palette.less                         │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/fonts.less                                 │
+ *     │        • //github.com/invokeImmediately/WSU-UE---CSS/mixins.less                                │
+ *     ├-------------------------------------------------------------------------------------------------┤
  */
 
 section.column-one-with-bottom-margin > .column.one {
@@ -418,6 +426,11 @@ section.side-right .column.two p {
 .column section:not(:last-child) > *:last-child:not(.vpue-jump-bar) {
 	padding-bottom: 0;
 }
+
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· SPACING OVERWRITES to improve responsive design ·································· │
+ *         └-----------------------------------------------------------------------------------------┘
+ */
 
 main section.row > .column > p:not(.no-btm-margin),
 main section.row > .column > article > .article-body > p:not(.no-btm-margin),
@@ -520,6 +533,14 @@ main section.row > .column table > tbody > tr > td > ol:last-child,
 main section.row > .column table > tbody > tr > td > section > ol:last-child {
 	margin-bottom: 0;
 }
+
+/*         ┌-----------------------------------------------------------------------------------------┐
+ *         │ ···· LINKED COLUMNS content group ····················································· │
+ *         └-----------------------------------------------------------------------------------------┘
+ */
+
+/*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
+ */
 
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++ ASIDE selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
