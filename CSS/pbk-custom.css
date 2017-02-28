@@ -5069,32 +5069,6 @@ div.column div.builder-section-content.cycle-slideshow {
 
 }
 
-@media all and (min-width: 481px) {
-
-.interactively-flipped-panels .container .panel-wrapper:hover .panel .front {
-	transition-property: opacity, z-index;
-	-webkit-transition-property: opacity, z-index;
-	transition-delay: 0.5s, 0.5s;
-	-webkit-transition-delay: 0.5s, 0.5s;
-	transition-duration: 0.25s, 0.25s;
-	-webkit-transition-duration: 0.25s, 0.25s;
-	transition-timing-function: linear, step-end;
-	-webkit-transition-timing-function: linear, step-end;
-}
-
-.interactively-flipped-panels .container .panel-wrapper:hover .panel .rear {
-	transition-property: opacity;
-	-webkit-transition-property: opacity;
-	transition-delay: 0.5s;
-	-webkit-transition-delay: 0.5s;
-	transition-duration: 0s;
-	-webkit-transition-duration: 0s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
-}
-
-}
-
 @media only screen and (min-width: 481px) and (max-width: 693px) {
 
 .gutter .column:not(.gutterless),
@@ -5161,6 +5135,32 @@ div.column div.builder-section-content.cycle-slideshow {
 .quarters.gutter .column.four:not(.gutterless),
 .quarters.gutter .column:nth-of-type(4n+8):not(.gutterless) {
 	padding-left: 1rem;
+}
+
+}
+
+@media all and (min-width: 481px) {
+
+.interactively-flipped-panels .container .panel-wrapper:hover .panel .front {
+	transition-property: opacity, z-index;
+	-webkit-transition-property: opacity, z-index;
+	transition-delay: 0.5s, 0.5s;
+	-webkit-transition-delay: 0.5s, 0.5s;
+	transition-duration: 0.25s, 0.25s;
+	-webkit-transition-duration: 0.25s, 0.25s;
+	transition-timing-function: linear, step-end;
+	-webkit-transition-timing-function: linear, step-end;
+}
+
+.interactively-flipped-panels .container .panel-wrapper:hover .panel .rear {
+	transition-property: opacity;
+	-webkit-transition-property: opacity;
+	transition-delay: 0.5s;
+	-webkit-transition-delay: 0.5s;
+	transition-duration: 0s;
+	-webkit-transition-duration: 0s;
+	transition-timing-function: linear;
+	-webkit-transition-timing-function: linear;
 }
 
 }
@@ -5686,6 +5686,35 @@ div.readability-controlled {
 
 }
 
+@media only screen and (min-width: 990px) {
+
+div.column li.gfield.has-label-spacer > div.ginput_container {
+	margin-top: 21px;
+}
+
+}
+
+@media all and (min-width: 990px) {
+
+span.hides-from-spine {
+	display: none;
+}
+
+}
+
+@media (min-width: 990px) and (max-width: 1049px) {
+
+section.single.large-format-friendly .column.one,
+section.row.single.large-format-friendly .column.one {
+	max-width: 800px;
+}
+
+header.main-header.centered {
+	text-align: left;
+}
+
+}
+
 @media all and (min-width: 990px) and (max-width: 1072px) {
 
 .column h1 {
@@ -5879,35 +5908,6 @@ ul.content-boxes > li p {
 
 div.column .gform_wrapper {
 	font-size: 16px;
-}
-
-}
-
-@media only screen and (min-width: 990px) {
-
-div.column li.gfield.has-label-spacer > div.ginput_container {
-	margin-top: 21px;
-}
-
-}
-
-@media all and (min-width: 990px) {
-
-span.hides-from-spine {
-	display: none;
-}
-
-}
-
-@media (min-width: 990px) and (max-width: 1049px) {
-
-section.single.large-format-friendly .column.one,
-section.row.single.large-format-friendly .column.one {
-	max-width: 800px;
-}
-
-header.main-header.centered {
-	text-align: left;
 }
 
 }
