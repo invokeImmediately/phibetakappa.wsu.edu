@@ -1,3 +1,4 @@
+@grid-behavior: "hybrid";
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 
 @pbk-orange: #d59929;
@@ -10,7 +11,7 @@ body {
 
 main {
 	background: @hex-white;
-	@media screen and (min-width: (@v-bckgrnd-thrshld + 1)) {
+	@media all and (min-width: (@v-bckgrnd-thrshld + 1)) {
 		border-left: 1px solid rgba(red(@pbk-blue), green(@pbk-blue), blue(@pbk-blue), 0.5);
 	}
 }
@@ -25,14 +26,14 @@ header.main-header {
 	&:extend(.has-dflt-font);
 	background: @pbk-orange url(/wp-content/uploads/sites/1177/2016/08/background_main-website-header_PBK-gold.jpg) center center no-repeat scroll;
 	color: @hex-darker-gray !important;
-	@media screen and (max-width: @v-bckgrnd-thrshld) {
+	@media all and (max-width: @v-bckgrnd-thrshld) {
 		color: @pbk-blue !important;
 	}
 }
 
 .main-header sub:not(.unset), .main-header sup:not(.unset) {
 	color: @hex-darker-gray !important;
-	@media screen and (max-width: @v-bckgrnd-thrshld) {
+	@media all and (max-width: @v-bckgrnd-thrshld) {
 		color: @pbk-blue !important;
 	}
 }
@@ -76,7 +77,7 @@ section.row.halves.article-header {
 				margin-bottom: 0.35em;
 				color: @hex-white;
 				.transform(~"translateY(-50%)");
-				@media (max-width: @v-rghtclmn-thrshld) {
+				@media all and (max-width: @v-rghtclmn-thrshld) {
 					font-size: 6.5vw;
 					right: (@v-dflt-spcng / 2);
 					left: (@v-dflt-spcng / 2);
@@ -97,7 +98,7 @@ section.row.halves.article-header {
 			background-size: cover;
 		}
 		&.one, &.two {
-			@media (max-width: @v-rghtclmn-thrshld) {
+			@media all and (max-width: @v-rghtclmn-thrshld) {
 				float: left;
 				clear: none;
 			}
