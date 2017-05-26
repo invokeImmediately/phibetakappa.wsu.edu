@@ -1,10 +1,14 @@
-var gulp = require('gulp');
-var cmq = require('gulp-combine-media-queries');
+var gulp = require('gulp'),
+	gcmq = require('gulp-group-css-media-queries'),
+	insertLines = require('gulp-insert-lines');
 
-gulp.task('cmq', function () {
-  gulp.src('./css/pbk-custom.css')
-	.pipe(cmq({
-	  use_external: false
-	}))
-	.pipe(gulp.dest('css'));
+gulp.task('default', function () {
+	gulp.src('./css/pbk-custom.css')
+		.pipe(gcmq())
+		.pipe(insertLines({
+			'before': /^@media/,
+			'lineBefore': '/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗\r\n*   ║ MEDIA QUERIES ####################################################################################################### ║\r\n*   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝\r\n*/',
+      'stopAfterFirstMatch': true
+		}))
+		.pipe(gulp.dest('css'));
 });
