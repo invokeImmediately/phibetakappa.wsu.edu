@@ -1,0 +1,1 @@
+cd "C:\Users\CamilleandDaniel\Documents\GitHub\learningcommunities.wsu.edu\"git add JS\wp-custom-js-source.min.prev.jsgit commit -m "Updating backup of latest verified custom JS build"git push
