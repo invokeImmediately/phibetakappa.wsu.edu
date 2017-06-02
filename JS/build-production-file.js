@@ -8,7 +8,9 @@ concat([
  '../WSU-UE---JS/jQuery.are-you-sure.js',
  '../WSU-UE---JS/jQuery.qTip.js',
  '../WSU-UE---JS/jQuery.textResize.js',
- '../WSU-UE---JS/jQuery.masonry.min.js'
+ '../../imagesloaded/imagesloaded.pkgd.min.js',
+ '../../masonry/dist/masonry.pkgd.min.js',
+ '../WSU-UE---JS/jQuery.masonry-custom.js',
  ], './pbk-custom.js', function() {
     console.log('Concatenation complete.');     
  });
