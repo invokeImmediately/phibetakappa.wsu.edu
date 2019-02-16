@@ -1,20 +1,62 @@
+/** ┌────────────────────────────────────────────────────────────────────────────────────────────┐
+*** │ FILENAME: dsp-custom.less                                                                  │
+*** └────────────────────────────────────────────────────────────────────────────────────────────┘
+**/
+
 @grid-behavior: "hybrid";
+@oue-rules-wrapper: ~"";
+
+@import "..\WSU-UE---CSS\variables.less";
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
+
+/*! ================================================================================================
+*** CUSTOM STYLE SHEET for the WSU Gamma Chapter of Phi Beta Kappa
+*** ================================================================================================
+***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)            
+***
+***   CONTENTS: CSS compiled from Less language extension of CSS; only used on the website for the
+*     Gamma Chapter of Phi Beta Kappa.
+***
+***   GIT REPOSITORY: https://github.com/invokeImmediately/phibetakappa.wsu.edu
+***     See git repository for fully documented, precompiled source code.
+*** ================================================================================================
+**/
+
+/** ================================================================================================
+*** §1: Backgrounds
+**/
+
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §1.1: Color settings
+**/
 
 @pbk-orange: #d59929;
 @pbk-blue: #114e8f;
 @pbk-bright-blue: #4781be;
 
+
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §1.2: Body
+**/
+
 body {
 	background: @pbk-blue linear-gradient(to bottom, rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0.3333), rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0) 50%, rgba(red(@pbk-orange), green(@pbk-orange), blue(@pbk-orange), 0)) top left/10px 100% repeat-x fixed;
 }
 
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §1.3: Main
+**/
+
 main {
 	background: @hex-white;
-	@media all and (min-width: (@v-bckgrnd-thrshld + 1)) {
+	@media all and (min-width: (@background-width-threshold + 1)) {
 		border-left: 1px solid rgba(red(@pbk-blue), green(@pbk-blue), blue(@pbk-blue), 0.5);
 	}
 }
+
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §1.4: Jacket
+**/
 
 #jacket {
 	background-repeat: no-repeat;
@@ -22,18 +64,22 @@ main {
 	background-attachment: fixed;
 }
 
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §1.5: Main header
+**/
+
 header.main-header {
 	&:extend(.has-dflt-font);
-	background: @pbk-orange url(/wp-content/uploads/sites/1177/2016/08/background_main-website-header_PBK-gold.jpg) center center no-repeat scroll;
+	background: @pbk-orange url(/wp-content/uploads/sites/1177/2016/08/background_main-website-header_PBK-gold.jpg) center center/cover no-repeat scroll;
 	color: @hex-darker-gray !important;
-	@media all and (max-width: @v-bckgrnd-thrshld) {
+	@media all and (max-width: @background-width-threshold) {
 		color: @pbk-blue !important;
 	}
 }
 
 .main-header sub:not(.unset), .main-header sup:not(.unset) {
 	color: @hex-darker-gray !important;
-	@media all and (max-width: @v-bckgrnd-thrshld) {
+	@media all and (max-width: @background-width-threshold) {
 		color: @pbk-blue !important;
 	}
 }
@@ -42,111 +88,108 @@ body.page:not(.home) main.spine-blank-template > header.main-header {
 	height: 85px;
 }
 
-/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### ARTICLE/PAGE-HEADER layouts ##################################################################### ║
- *  ╠========================================================================================================╣
- *  ║ Container designed to hold the header for the article being presented on the current page.             ║
- *  ║  ╘═» Customized here for use on the WSU Phi Beta Kappa website.                                        ║
- *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
- */
-section.row.halves.article-header {
-	position: relative;
-	height: 230px;
-	&.gutter .column:not(.gutterless) {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	&.pad-top .column {
-		padding-top: 0;
-	}
-	div.column {	
-		&.one {
-			position: absolute;
-			right: 40%;
-			left: 0;
-			width: auto;
-			height: 100%;			
-			padding-left: 0;
-			padding-right: 0;			
-			background: @hex-dark-gray;
-			& > h1 {
-				position: absolute;
-				top: 50%;
-				right: @v-dflt-spcng;
-				left: @v-dflt-spcng;
-				margin-bottom: 0.35em;
-				color: @hex-white;
-				.transform(~"translateY(-50%)");
-				@media all and (max-width: @v-rghtclmn-thrshld) {
-					font-size: 6.5vw;
-					right: (@v-dflt-spcng / 2);
-					left: (@v-dflt-spcng / 2);
-				}
-			}
-			& > :not(h1) {
-				display: none;
-			}
-		}
-		&.two {
-			position: absolute;
-			right: 0;
-			left: 60%;
-			width: auto;
-			height: 100%;
-			background-color: @hex-gray;
-			background-position: center center;
-			background-size: cover;
-		}
-		&.one, &.two {
-			@media all and (max-width: @v-rghtclmn-thrshld) {
-				float: left;
-				clear: none;
-			}
-		}
-	}
-	&.nsse div.column.two {
-		background: url(/wp-content/uploads/sites/1304/2016/08/nsse_header-banner_enhanced.png) center center/95% auto no-repeat,
-		 #e6e6e6 url(/wp-content/uploads/sites/1304/2016/08/nsse_header-bg.gif) top left repeat-x;
-	}
-}
+/** ================================================================================================
+*** §2: Article headers
+**/
+
+// section.row.halves.article-header {
+// 	position: relative;
+// 	height: 230px;
+// 	&.gutter .column:not(.gutterless) {
+// 		padding-left: 0;
+// 		padding-right: 0;
+// 	}
+// 	&.pad-top .column {
+// 		padding-top: 0;
+// 	}
+// 	div.column {	
+// 		&.one {
+// 			position: absolute;
+// 			right: 40%;
+// 			left: 0;
+// 			width: auto;
+// 			height: 100%;			
+// 			padding-left: 0;
+// 			padding-right: 0;			
+// 			background: @hex-dark-gray;
+// 			& > h1 {
+// 				position: absolute;
+// 				top: 50%;
+// 				right: @v-dflt-spcng;
+// 				left: @v-dflt-spcng;
+// 				margin-bottom: 0.35em;
+// 				color: @hex-white;
+// 				.transform(~"translateY(-50%)");
+// 				@media all and (max-width: @v-rghtclmn-thrshld) {
+// 					font-size: 6.5vw;
+// 					right: (@v-dflt-spcng / 2);
+// 					left: (@v-dflt-spcng / 2);
+// 				}
+// 			}
+// 			& > :not(h1) {
+// 				display: none;
+// 			}
+// 		}
+// 		&.two {
+// 			position: absolute;
+// 			right: 0;
+// 			left: 60%;
+// 			width: auto;
+// 			height: 100%;
+// 			background-color: @hex-gray;
+// 			background-position: center center;
+// 			background-size: cover;
+// 		}
+// 		&.one, &.two {
+// 			@media all and (max-width: @v-rghtclmn-thrshld) {
+// 				float: left;
+// 				clear: none;
+// 			}
+// 		}
+// 	}
+// 	&.nsse div.column.two {
+// 		background: url(/wp-content/uploads/sites/1304/2016/08/nsse_header-banner_enhanced.png) center center/95% auto no-repeat,
+// 		 #e6e6e6 url(/wp-content/uploads/sites/1304/2016/08/nsse_header-bg.gif) top left repeat-x;
+// 	}
+// }
  
-section.row.single.article-header {
-	height: 230px;
-	div.column {
-		background: @hex-dark-gray;
-		background: linear-gradient(to right, rgba(red(@hex-white), green(@hex-white), blue(@hex-white), 0),
-		 rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0) 60%,
-		 rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 1) 60%,
-		 rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 1)),
-		 linear-gradient(@hex-dark-gray, @hex-dark-gray);
-		position: relative;
-		padding-left: 0;
-		padding-right: 0;
-		width: 100%;
-		height: 100%;
-		& > h1 {
-			position: absolute;
-			top: 50%;
-			left: 2rem;
-			right: 40%;
-			right: ~"calc(40% + 2rem)";
-			margin-bottom: 0.35em;
-			color: @hex-white;
-			.transform(~"translateY(-50%)");
-		}
-		& > :not(h1) {
-			display: none;
-		}
-		&:before {
-			content: "";
-			position: absolute;
-			top: 1rem;
-			right: 1rem;
-			width: 10%;
-			height: 0;
-		}
-	}
-}
+// section.row.single.article-header {
+// 	height: 230px;
+// 	div.column {
+// 		background: @hex-dark-gray;
+// 		background: linear-gradient(to right, rgba(red(@hex-white), green(@hex-white), blue(@hex-white), 0),
+// 		 rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0) 60%,
+// 		 rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 1) 60%,
+// 		 rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 1)),
+// 		 linear-gradient(@hex-dark-gray, @hex-dark-gray);
+// 		position: relative;
+// 		padding-left: 0;
+// 		padding-right: 0;
+// 		width: 100%;
+// 		height: 100%;
+// 		& > h1 {
+// 			position: absolute;
+// 			top: 50%;
+// 			left: 2rem;
+// 			right: 40%;
+// 			right: ~"calc(40% + 2rem)";
+// 			margin-bottom: 0.35em;
+// 			color: @hex-white;
+// 			.transform(~"translateY(-50%)");
+// 		}
+// 		& > :not(h1) {
+// 			display: none;
+// 		}
+// 		&:before {
+// 			content: "";
+// 			position: absolute;
+// 			top: 1rem;
+// 			right: 1rem;
+// 			width: 10%;
+// 			height: 0;
+// 		}
+// 	}
+// }
  
 /*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
  *  ║ #### ASIDE layouts ################################################################################### ║
