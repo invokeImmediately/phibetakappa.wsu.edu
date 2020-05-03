@@ -46,11 +46,10 @@
  */
 $( function () {
 	// Tweak HTML source to work around some quirks of WordPress setup
-	var htmlNewsHeader = '<section id="news-section-header" class="row single article-header'
-		+ ' article-header--colored h--192px"><div style="" class="column one black-back"><div'
-		+ ' class="gray-er-text wrapper"><ol class="breadcrumb-list"><li'
-		+ ' class="breadcrumb-list__breadcrumb"><a class="breadcrumb-list__link"'
-		+ ' href="/">Home</a></li></ol><h1 class="tt--uppercase">News</h1></div></div></section>';
+	var htmlNewsHeader = '<section id="news-section-header" class="row single article-header h--1' +
+		'92px"><div class="column one"><div class="wrapper"><ol class="breadcrumb-list"><li class' +
+		'="breadcrumb-list__breadcrumb"><a class="breadcrumb-list__link" href="/">Home</a></li></o' +
+		'l><h1 class="tt--uppercase">News</h1></div></div></section>';
 	addPageHeaderOnNewsPages( htmlNewsHeader );
 } );
 
